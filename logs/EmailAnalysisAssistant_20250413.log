@@ -1,0 +1,1146 @@
+2025-04-13 15:46:58,685 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-13 15:46:58,926 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-13 15:46:58,926 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-13 15:46:58,926 - EmailAnalysisAssistant - DEBUG - 成功加载 cases.txt
+2025-04-13 15:46:58,926 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-13 15:46:58,926 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "Y", "processed_state": "Y", "error_message": "", "create_ticket": "", "ticket_id": "XM5245 update!"}
+2025-04-13 15:46:58,926 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-13 15:46:58,927 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-13 15:47:06,434 - EmailAnalysisAssistant - ERROR - 分析过程发生错误: Connection error.
+2025-04-13 15:47:28,275 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-13 15:47:28,437 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-13 15:47:28,438 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-13 15:47:28,438 - EmailAnalysisAssistant - DEBUG - 成功加载 cases.txt
+2025-04-13 15:47:28,438 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-13 15:47:28,438 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "Y", "processed_state": "Y", "error_message": "", "create_ticket": "", "ticket_id": "XM5245 update!"}
+2025-04-13 15:47:28,438 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-13 15:47:28,439 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-13 15:47:31,781 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "automation",
+        "rootcause": "The email was successfully processed for updating a ticket.",
+        "action": "update"
+    }
+]
+2025-04-13 15:47:31,781 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "automation", "rootcause": "The email was successfully processed for updating a ticket.", "action": "update"}]
+2025-04-13 15:52:55,795 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-13 15:52:55,966 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-13 15:52:55,966 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-13 15:52:55,966 - EmailAnalysisAssistant - DEBUG - 成功加载 cases.txt
+2025-04-13 15:52:55,967 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-13 15:52:55,967 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "Y", "processed_state": "Y", "error_message": "", "create_ticket": "", "ticket_id": "XM5245 update!"}
+2025-04-13 15:52:55,967 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-13 15:52:55,967 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-13 15:52:58,648 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "automation",
+        "rootcause": "The email was successfully processed for updating a ticket, but it was not moved to the update folder.",
+        "action": "update"
+    }
+]
+2025-04-13 15:52:58,648 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "automation", "rootcause": "The email was successfully processed for updating a ticket, but it was not moved to the update folder.", "action": "update"}]
+2025-04-13 15:54:09,946 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-13 15:54:10,121 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-13 15:54:10,121 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-13 15:54:10,121 - EmailAnalysisAssistant - DEBUG - 成功加载 cases.txt
+2025-04-13 15:54:10,122 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-13 15:54:10,122 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "Y", "processed_state": "Y", "error_message": "", "create_ticket": "", "ticket_id": "XM5245 update!"}
+2025-04-13 15:54:10,122 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-13 15:54:10,122 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-13 15:54:14,508 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "automation",
+        "rootcause": "The email was successfully processed for updating a ticket, but it was not moved to the update folder.",
+        "action": "update",
+        "impact": "No"
+    }
+]
+2025-04-13 15:54:14,508 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "automation", "rootcause": "The email was successfully processed for updating a ticket, but it was not moved to the update folder.", "action": "update", "impact": "No"}]
+2025-04-13 15:54:58,456 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-13 15:54:58,635 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-13 15:54:58,635 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-13 15:54:58,635 - EmailAnalysisAssistant - DEBUG - 成功加载 cases.txt
+2025-04-13 15:54:58,636 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-13 15:54:58,636 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "F", "processed_state": "F", "error_message": "数据库连接失败", "create_ticket": "", "ticket_id": ""}
+2025-04-13 15:54:58,636 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-13 15:54:58,636 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-13 15:55:15,758 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "automation",
+        "rootcause": "Database connection failure",
+        "action": "inbox",
+        "impact": "Yes"
+    },
+    {
+        "type": "dev",
+        "rootcause": "The error message indicates a failure in establishing a connection to the database. This could be due to network issues, database server downtime, or configuration errors in the connection settings. To resolve this, check the network connectivity, ensure the database server is running, and verify the connection configuration in the application.",
+        "action": "-1",
+        "impact": "Yes"
+    },
+    {
+        "type": "user",
+        "rootcause": "The system was unable to connect to the database, which is necessary for processing the email and creating or updating a ticket. This issue needs to be resolved by the technical team.",
+        "action": "-1",
+        "impact": "Yes"
+    }
+]
+2025-04-13 15:55:15,758 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "automation", "rootcause": "Database connection failure", "action": "inbox", "impact": "Yes"}, {"type": "dev", "rootcause": "The error message indicates a failure in establishing a connection to the database. This could be due to network issues, database server downtime, or configuration errors in the connection settings. To resolve this, check the network connectivity, ensure the database server is running, and verify the connection configuration in the application.", "action": "-1", "impact": "Yes"}, {"type": "user", "rootcause": "The system was unable to connect to the database, which is necessary for processing the email and creating or updating a ticket. This issue needs to be resolved by the technical team.", "action": "-1", "impact": "Yes"}]
+2025-04-13 16:01:44,620 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-13 16:01:44,786 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-13 16:01:44,786 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-13 16:01:44,786 - EmailAnalysisAssistant - DEBUG - 成功加载 cases.txt
+2025-04-13 16:01:44,786 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-13 16:01:44,786 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "F", "processed_state": "F", "error_message": "数据库连接失败", "create_ticket": "", "ticket_id": ""}
+2025-04-13 16:01:44,787 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-13 16:01:44,787 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-13 16:02:01,236 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "dev",
+        "rootcause": "The root cause of the failure is a database connection error. The system was unable to establish a connection to the database during the processing of the email, which prevented the creation or update of the ticket. This issue is likely due to a configuration problem, network issue, or database server downtime.",
+        "action": "-1",
+        "impact": "Yes"
+    },
+    {
+        "type": "user",
+        "rootcause": "The email processing failed because the system could not connect to the database. This means the ticket could not be created or updated as intended. Please check if the database server is running and accessible, and ensure that the connection settings are correct.",
+        "action": "-1",
+        "impact": "Yes"
+    }
+]
+2025-04-13 16:02:01,236 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "dev", "rootcause": "The root cause of the failure is a database connection error. The system was unable to establish a connection to the database during the processing of the email, which prevented the creation or update of the ticket. This issue is likely due to a configuration problem, network issue, or database server downtime.", "action": "-1", "impact": "Yes"}, {"type": "user", "rootcause": "The email processing failed because the system could not connect to the database. This means the ticket could not be created or updated as intended. Please check if the database server is running and accessible, and ensure that the connection settings are correct.", "action": "-1", "impact": "Yes"}]
+2025-04-13 16:02:52,326 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-13 16:02:52,497 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-13 16:02:52,497 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-13 16:02:52,498 - EmailAnalysisAssistant - DEBUG - 成功加载 cases.txt
+2025-04-13 16:02:52,498 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-13 16:02:52,498 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "Y", "processed_state": "Y", "error_message": "", "create_ticket": "", "ticket_id": "XM5245 update!"}
+2025-04-13 16:02:52,498 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-13 16:02:52,499 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-13 16:02:56,515 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "automation",
+        "rootcause": "The email was successfully processed, and an update operation was performed on the ticket.",
+        "action": "update",
+        "impact": "No impact, as the ticket was successfully updated."
+    }
+]
+2025-04-13 16:02:56,515 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "automation", "rootcause": "The email was successfully processed, and an update operation was performed on the ticket.", "action": "update", "impact": "No impact, as the ticket was successfully updated."}]
+2025-04-13 16:03:22,419 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-13 16:03:22,597 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-13 16:03:22,597 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-13 16:03:22,597 - EmailAnalysisAssistant - DEBUG - 成功加载 cases.txt
+2025-04-13 16:03:22,597 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-13 16:03:22,598 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "F", "processed_state": "I", "error_message": "", "create_ticket": "", "ticket_id": ""}
+2025-04-13 16:03:22,598 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-13 16:03:22,598 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-13 16:03:25,850 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "automation",
+        "rootcause": "The email was determined to be ignorable based on business logic.",
+        "action": "ignore",
+        "impact": "No impact as the email does not require processing."
+    }
+]
+2025-04-13 16:03:25,850 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "automation", "rootcause": "The email was determined to be ignorable based on business logic.", "action": "ignore", "impact": "No impact as the email does not require processing."}]
+2025-04-13 16:04:55,420 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-13 16:04:55,599 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-13 16:04:55,599 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-13 16:04:55,599 - EmailAnalysisAssistant - DEBUG - 成功加载 cases.txt
+2025-04-13 16:04:55,600 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-13 16:04:55,600 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "F", "processed_state": "F", "error_message": "exchange service not available", "create_ticket": "", "ticket_id": ""}
+2025-04-13 16:04:55,600 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-13 16:04:55,600 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-13 16:05:11,065 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "dev",
+        "rootcause": "The error message 'exchange service not available' indicates that the system is unable to connect to the exchange service, which is necessary for creating or updating tickets. This could be due to network issues, service downtime, or configuration errors in the system.",
+        "action": "-1",
+        "impact": "Yes"
+    },
+    {
+        "type": "user",
+        "rootcause": "The system is currently unable to process emails because it cannot connect to the necessary service. This issue needs to be resolved by the technical team.",
+        "action": "-1",
+        "impact": "Yes"
+    }
+]
+2025-04-13 16:05:11,065 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "dev", "rootcause": "The error message 'exchange service not available' indicates that the system is unable to connect to the exchange service, which is necessary for creating or updating tickets. This could be due to network issues, service downtime, or configuration errors in the system.", "action": "-1", "impact": "Yes"}, {"type": "user", "rootcause": "The system is currently unable to process emails because it cannot connect to the necessary service. This issue needs to be resolved by the technical team.", "action": "-1", "impact": "Yes"}]
+2025-04-13 16:06:07,099 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-13 16:06:07,286 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-13 16:06:07,287 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-13 16:06:07,287 - EmailAnalysisAssistant - DEBUG - 成功加载 cases.txt
+2025-04-13 16:06:07,287 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-13 16:06:07,288 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "F", "processed_state": "F", "error_message": "exchange service not available", "create_ticket": "", "ticket_id": ""}
+2025-04-13 16:06:07,288 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-13 16:06:07,288 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-13 16:06:10,383 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "automation",
+        "rootcause": "System environment issue: exchange service not available",
+        "action": "inbox",
+        "impact": "Yes"
+    }
+]
+2025-04-13 16:06:10,383 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "automation", "rootcause": "System environment issue: exchange service not available", "action": "inbox", "impact": "Yes"}]
+2025-04-13 16:07:30,005 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-13 16:07:30,174 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-13 16:07:30,174 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-13 16:07:30,174 - EmailAnalysisAssistant - DEBUG - 成功加载 cases.txt
+2025-04-13 16:07:30,175 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-13 16:07:30,175 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "F", "processed_state": "F", "error_message": "exchange service not available", "create_ticket": "", "ticket_id": ""}
+2025-04-13 16:07:30,175 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-13 16:07:30,176 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-13 16:07:33,802 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "automation",
+        "rootcause": "System environment issue: exchange service not available",
+        "action": "inbox",
+        "impact": "Yes"
+    }
+]
+2025-04-13 16:07:33,802 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "automation", "rootcause": "System environment issue: exchange service not available", "action": "inbox", "impact": "Yes"}]
+2025-04-13 16:07:49,056 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-13 16:07:49,223 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-13 16:07:49,223 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-13 16:07:49,223 - EmailAnalysisAssistant - DEBUG - 成功加载 cases.txt
+2025-04-13 16:07:49,224 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-13 16:07:49,224 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "F", "processed_state": "F", "error_message": "exchange service not available", "create_ticket": "N", "ticket_id": "XM5245 update!"}
+2025-04-13 16:07:49,224 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-13 16:07:49,224 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-13 16:07:52,952 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "automation",
+        "rootcause": "exchange service not available",
+        "action": "inbox",
+        "impact": "yes"
+    }
+]
+2025-04-13 16:07:52,952 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "automation", "rootcause": "exchange service not available", "action": "inbox", "impact": "yes"}]
+2025-04-13 16:08:08,783 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-13 16:08:08,952 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-13 16:08:08,952 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-13 16:08:08,952 - EmailAnalysisAssistant - DEBUG - 成功加载 cases.txt
+2025-04-13 16:08:08,952 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-13 16:08:08,952 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "F", "processed_state": "F", "error_message": "exchange service not available", "create_ticket": "N", "ticket_id": "XM5245 update!"}
+2025-04-13 16:08:08,953 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-13 16:08:08,953 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-13 16:08:11,621 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "automation",
+        "rootcause": "System environment issue: exchange service not available",
+        "action": "inbox",
+        "impact": "No"
+    }
+]
+2025-04-13 16:08:11,621 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "automation", "rootcause": "System environment issue: exchange service not available", "action": "inbox", "impact": "No"}]
+2025-04-13 16:11:19,716 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-13 16:11:19,882 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-13 16:11:19,883 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-13 16:11:19,883 - EmailAnalysisAssistant - DEBUG - 成功加载 cases.txt
+2025-04-13 16:11:19,883 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-13 16:11:19,883 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "F", "processed_state": "F", "error_message": "exchange service not available", "create_ticket": "N", "ticket_id": "XM5245 update!"}
+2025-04-13 16:11:19,883 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-13 16:11:19,884 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-13 16:11:31,180 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "automation",
+        "rootcause": "exchange service not available",
+        "action": "inbox",
+        "impact": "yes"
+    },
+    {
+        "type": "dev",
+        "rootcause": "The error message indicates that the exchange service is not available, which could be due to network issues, service downtime, or configuration problems. This needs to be investigated and resolved by the development team.",
+        "action": "-1",
+        "impact": "yes"
+    },
+    {
+        "type": "user",
+        "rootcause": "The system is unable to process the email due to an issue with the exchange service. This needs to be fixed to ensure emails are processed correctly.",
+        "action": "-1",
+        "impact": "yes"
+    }
+]
+2025-04-13 16:11:31,180 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "automation", "rootcause": "exchange service not available", "action": "inbox", "impact": "yes"}, {"type": "dev", "rootcause": "The error message indicates that the exchange service is not available, which could be due to network issues, service downtime, or configuration problems. This needs to be investigated and resolved by the development team.", "action": "-1", "impact": "yes"}, {"type": "user", "rootcause": "The system is unable to process the email due to an issue with the exchange service. This needs to be fixed to ensure emails are processed correctly.", "action": "-1", "impact": "yes"}]
+2025-04-13 16:14:05,570 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-13 16:14:05,742 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-13 16:14:05,742 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-13 16:14:05,742 - EmailAnalysisAssistant - DEBUG - 成功加载 cases.txt
+2025-04-13 16:14:05,742 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-13 16:14:05,743 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "F", "processed_state": "F", "error_message": "exchange service not available", "create_ticket": "N", "ticket_id": "XM5245 update!"}
+2025-04-13 16:14:05,743 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-13 16:14:05,743 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-13 16:14:30,160 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "automation",
+        "rootcause": "exchange service not available",
+        "action": "inbox",
+        "impact": "yes"
+    },
+    {
+        "type": "dev",
+        "rootcause": "The error message indicates that the exchange service is not available, which could be due to network issues, service downtime, or configuration problems. This needs to be investigated and resolved by the development team.",
+        "action": "-1",
+        "impact": "yes"
+    },
+    {
+        "type": "user",
+        "rootcause": "The system is unable to process the email due to an issue with the exchange service. This needs to be fixed to ensure emails are processed correctly.",
+        "action": "-1",
+        "impact": "yes"
+    }
+]
+2025-04-13 16:14:30,160 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "automation", "rootcause": "exchange service not available", "action": "inbox", "impact": "yes"}, {"type": "dev", "rootcause": "The error message indicates that the exchange service is not available, which could be due to network issues, service downtime, or configuration problems. This needs to be investigated and resolved by the development team.", "action": "-1", "impact": "yes"}, {"type": "user", "rootcause": "The system is unable to process the email due to an issue with the exchange service. This needs to be fixed to ensure emails are processed correctly.", "action": "-1", "impact": "yes"}]
+2025-04-13 16:16:44,247 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-13 16:16:44,430 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-13 16:16:44,430 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-13 16:16:44,430 - EmailAnalysisAssistant - DEBUG - 成功加载 cases.txt
+2025-04-13 16:16:44,431 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-13 16:16:44,431 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "F", "processed_state": "F", "error_message": "exchange service not available", "create_ticket": "N", "ticket_id": "XM5245 update!"}
+2025-04-13 16:16:44,431 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-13 16:16:44,431 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-13 16:16:49,470 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "automation",
+        "rootcause": "exchange service not available",
+        "action": "inbox",
+        "impact": "no"
+    }
+]
+2025-04-13 16:16:49,470 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "automation", "rootcause": "exchange service not available", "action": "inbox", "impact": "no"}]
+2025-04-13 16:17:33,015 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-13 16:17:33,196 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-13 16:17:33,196 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-13 16:17:33,197 - EmailAnalysisAssistant - DEBUG - 成功加载 cases.txt
+2025-04-13 16:17:33,197 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-13 16:17:33,197 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "F", "processed_state": "F", "error_message": "exchange service not available", "create_ticket": "N", "ticket_id": "XM5245 update!"}
+2025-04-13 16:17:33,197 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-13 16:17:33,198 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-13 16:17:56,665 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+{
+"type": "automation",
+"rootcause": "The email processing failed due to exchange service not being available, which is a system environment issue.",
+"action": "inbox",
+"impact": "The ticket update was not processed, which may delay the update of the ticket XM5245."
+},
+{
+"type": "dev",
+"rootcause": "Error: exchange service not available. This indicates a connectivity or service availability issue with the exchange service. Possible causes include network issues, service downtime, or configuration problems. Recommendation: Check the exchange service status, network connectivity, and service logs to identify and resolve the issue.",
+"action": "-1",
+"impact": "The ticket update was not processed, which may delay the update of the ticket XM5245."
+}
+]
+2025-04-13 16:17:56,666 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "automation", "rootcause": "The email processing failed due to exchange service not being available, which is a system environment issue.", "action": "inbox", "impact": "The ticket update was not processed, which may delay the update of the ticket XM5245."}, {"type": "dev", "rootcause": "Error: exchange service not available. This indicates a connectivity or service availability issue with the exchange service. Possible causes include network issues, service downtime, or configuration problems. Recommendation: Check the exchange service status, network connectivity, and service logs to identify and resolve the issue.", "action": "-1", "impact": "The ticket update was not processed, which may delay the update of the ticket XM5245."}]
+2025-04-13 16:22:28,755 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-13 16:22:28,929 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-13 16:22:28,929 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-13 16:22:28,929 - EmailAnalysisAssistant - DEBUG - 成功加载 cases.txt
+2025-04-13 16:22:28,929 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-13 16:22:28,930 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "F", "processed_state": "F", "error_message": "exchange service not available", "create_ticket": "N", "ticket_id": "XM5245 update!"}
+2025-04-13 16:22:28,930 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-13 16:22:28,930 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-13 16:23:00,385 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-13 16:23:00,551 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-13 16:23:00,551 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-13 16:23:00,551 - EmailAnalysisAssistant - DEBUG - 成功加载 cases.txt
+2025-04-13 16:23:00,551 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-13 16:23:00,551 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "F", "processed_state": "F", "error_message": "exchange service not available", "create_ticket": "N", "ticket_id": "XM5245 update!"}
+2025-04-13 16:23:00,551 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-13 16:23:00,552 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-13 16:23:04,239 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "automation",
+        "rootcause": "exchange service not available",
+        "action": "update",
+        "impact": "no"
+    }
+]
+2025-04-13 16:23:04,239 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "automation", "rootcause": "exchange service not available", "action": "update", "impact": "no"}]
+2025-04-13 16:23:32,132 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-13 16:23:32,294 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-13 16:23:32,294 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-13 16:23:32,294 - EmailAnalysisAssistant - DEBUG - 成功加载 cases.txt
+2025-04-13 16:23:32,295 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-13 16:23:32,295 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "F", "processed_state": "F", "error_message": "exchange service not available", "create_ticket": "", "ticket_id": ""}
+2025-04-13 16:23:32,295 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-13 16:23:32,295 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-13 16:23:50,388 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "automation",
+        "rootcause": "exchange service not available",
+        "action": "inbox",
+        "impact": "yes"
+    },
+    {
+        "type": "dev",
+        "rootcause": "The error message indicates that the exchange service is not available, which could be due to network issues, service downtime, or configuration problems. This requires technical investigation and potential service restart or configuration adjustment.",
+        "action": "-1",
+        "impact": "yes"
+    },
+    {
+        "type": "user",
+        "rootcause": "The system is unable to process the email due to an issue with the exchange service. This might be temporary and could resolve itself once the service is back online.",
+        "action": "-1",
+        "impact": "yes"
+    }
+]
+2025-04-13 16:23:50,389 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "automation", "rootcause": "exchange service not available", "action": "inbox", "impact": "yes"}, {"type": "dev", "rootcause": "The error message indicates that the exchange service is not available, which could be due to network issues, service downtime, or configuration problems. This requires technical investigation and potential service restart or configuration adjustment.", "action": "-1", "impact": "yes"}, {"type": "user", "rootcause": "The system is unable to process the email due to an issue with the exchange service. This might be temporary and could resolve itself once the service is back online.", "action": "-1", "impact": "yes"}]
+2025-04-13 16:26:50,139 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-13 16:26:50,309 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-13 16:26:50,309 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-13 16:26:50,309 - EmailAnalysisAssistant - DEBUG - 成功加载 cases.txt
+2025-04-13 16:26:50,309 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-13 16:26:50,309 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "F", "processed_state": "F", "error_message": "exchange service not available", "create_ticket": "", "ticket_id": ""}
+2025-04-13 16:26:50,309 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-13 16:26:50,309 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-13 16:26:53,063 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "automation",
+        "rootcause": "exchange service not available",
+        "action": "inbox",
+        "impact": "yes"
+    }
+]
+2025-04-13 16:26:53,063 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "automation", "rootcause": "exchange service not available", "action": "inbox", "impact": "yes"}]
+2025-04-13 16:28:10,225 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-13 16:28:10,397 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-13 16:28:10,397 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-13 16:28:10,398 - EmailAnalysisAssistant - DEBUG - 成功加载 cases.txt
+2025-04-13 16:28:10,398 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-13 16:28:10,398 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "F", "processed_state": "F", "error_message": "数据库连接失败", "create_ticket": "", "ticket_id": ""}
+2025-04-13 16:28:10,398 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-13 16:28:10,398 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-13 16:28:13,811 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "automation",
+        "rootcause": "Database connection failure",
+        "action": "inbox",
+        "impact": "Yes"
+    }
+]
+2025-04-13 16:28:13,811 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "automation", "rootcause": "Database connection failure", "action": "inbox", "impact": "Yes"}]
+2025-04-13 16:28:35,290 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-13 16:28:35,460 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-13 16:28:35,460 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-13 16:28:35,461 - EmailAnalysisAssistant - DEBUG - 成功加载 cases.txt
+2025-04-13 16:28:35,461 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-13 16:28:35,461 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "F", "processed_state": "F", "error_message": "attachment too large", "create_ticket": "", "ticket_id": ""}
+2025-04-13 16:28:35,461 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-13 16:28:35,461 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-13 16:28:43,809 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "dev",
+        "rootcause": "The error message indicates that the attachment in the email is too large, which is causing the processing to fail. This issue is related to the system's handling of large attachments.",
+        "action": "-1",
+        "impact": "Yes"
+    },
+    {
+        "type": "user",
+        "rootcause": "The email contains an attachment that is too large for the system to process. Users should be advised to reduce the size of attachments before sending them.",
+        "action": "Please ensure that attachments in emails are within the acceptable size limit before sending.",
+        "impact": "Yes"
+    }
+]
+2025-04-13 16:28:43,809 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "dev", "rootcause": "The error message indicates that the attachment in the email is too large, which is causing the processing to fail. This issue is related to the system's handling of large attachments.", "action": "-1", "impact": "Yes"}, {"type": "user", "rootcause": "The email contains an attachment that is too large for the system to process. Users should be advised to reduce the size of attachments before sending them.", "action": "Please ensure that attachments in emails are within the acceptable size limit before sending.", "impact": "Yes"}]
+2025-04-13 16:30:04,451 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-13 16:30:04,621 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-13 16:30:04,621 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-13 16:30:04,621 - EmailAnalysisAssistant - DEBUG - 成功加载 cases.txt
+2025-04-13 16:30:04,621 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-13 16:30:04,621 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "F", "processed_state": "F", "error_message": "attachment too large", "create_ticket": "", "ticket_id": ""}
+2025-04-13 16:30:04,622 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-13 16:30:04,622 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-13 16:30:09,553 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "dev",
+        "rootcause": "The error message indicates that the attachment in the email is too large, which is causing the processing to fail. This issue needs to be addressed by enhancing the system's capability to handle larger attachments.",
+        "action": "-1",
+        "impact": "Yes"
+    }
+]
+2025-04-13 16:30:09,553 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "dev", "rootcause": "The error message indicates that the attachment in the email is too large, which is causing the processing to fail. This issue needs to be addressed by enhancing the system's capability to handle larger attachments.", "action": "-1", "impact": "Yes"}]
+2025-04-13 16:31:44,471 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-13 16:31:44,656 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-13 16:31:44,656 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-13 16:31:44,656 - EmailAnalysisAssistant - DEBUG - 成功加载 cases.txt
+2025-04-13 16:31:44,657 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-13 16:31:44,657 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "F", "processed_state": "F", "error_message": "attachment too large", "create_ticket": "", "ticket_id": ""}
+2025-04-13 16:31:44,657 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-13 16:31:44,658 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-13 16:31:49,458 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "user",
+        "rootcause": "The email contains an attachment that is too large, which is causing the processing to fail. Users should reduce the size of the attachment or split it into smaller parts before resending the email.",
+        "action": "Please modify the email by reducing the size of the attachment or splitting it into smaller parts, then resend the email for processing.",
+        "impact": "Yes"
+    }
+]
+2025-04-13 16:31:49,458 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "user", "rootcause": "The email contains an attachment that is too large, which is causing the processing to fail. Users should reduce the size of the attachment or split it into smaller parts before resending the email.", "action": "Please modify the email by reducing the size of the attachment or splitting it into smaller parts, then resend the email for processing.", "impact": "Yes"}]
+2025-04-13 16:33:05,540 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-13 16:33:05,737 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-13 16:33:05,737 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-13 16:33:05,737 - EmailAnalysisAssistant - DEBUG - 成功加载 cases.txt
+2025-04-13 16:33:05,737 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-13 16:33:05,738 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "F", "processed_state": "F", "error_message": "attachment too large", "create_ticket": "", "ticket_id": ""}
+2025-04-13 16:33:05,738 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-13 16:33:05,738 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-13 16:33:10,727 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "user",
+        "rootcause": "The email contains an attachment that is too large, which is causing the processing to fail.",
+        "action": "Please reduce the size of the attachment and resend the email.",
+        "impact": "No business impact as the ticket was not created or updated."
+    }
+]
+2025-04-13 16:33:10,727 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "user", "rootcause": "The email contains an attachment that is too large, which is causing the processing to fail.", "action": "Please reduce the size of the attachment and resend the email.", "impact": "No business impact as the ticket was not created or updated."}]
+2025-04-13 16:34:22,827 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-13 16:34:23,005 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-13 16:34:23,005 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-13 16:34:23,005 - EmailAnalysisAssistant - DEBUG - 成功加载 cases.txt
+2025-04-13 16:34:23,005 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-13 16:34:23,005 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "F", "processed_state": "F", "error_message": "attachment too large", "create_ticket": "", "ticket_id": ""}
+2025-04-13 16:34:23,005 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-13 16:34:23,006 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-13 16:34:34,598 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "user",
+        "rootcause": "The email contains an attachment that is too large, which is causing the processing to fail.",
+        "action": "Please reduce the size of the attachment and resend the email.",
+        "impact": "Yes"
+    },
+    {
+        "type": "automation",
+        "rootcause": "The system is unable to process emails with large attachments.",
+        "action": "inbox",
+        "impact": "Yes"
+    }
+]
+2025-04-13 16:34:34,598 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "user", "rootcause": "The email contains an attachment that is too large, which is causing the processing to fail.", "action": "Please reduce the size of the attachment and resend the email.", "impact": "Yes"}, {"type": "automation", "rootcause": "The system is unable to process emails with large attachments.", "action": "inbox", "impact": "Yes"}]
+2025-04-13 16:35:40,443 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-13 16:35:40,611 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-13 16:35:40,611 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-13 16:35:40,611 - EmailAnalysisAssistant - DEBUG - 成功加载 cases.txt
+2025-04-13 16:35:40,612 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-13 16:35:40,612 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "F", "processed_state": "F", "error_message": "attachment too large", "create_ticket": "", "ticket_id": ""}
+2025-04-13 16:35:40,612 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-13 16:35:40,613 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-13 16:35:47,404 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "user",
+        "rootcause": "The email contains an attachment that is too large, which is causing the processing to fail. The system cannot handle attachments exceeding a certain size.",
+        "action": "Please reduce the size of the attachment and resend the email.",
+        "impact": "Yes"
+    }
+]
+2025-04-13 16:35:47,404 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "user", "rootcause": "The email contains an attachment that is too large, which is causing the processing to fail. The system cannot handle attachments exceeding a certain size.", "action": "Please reduce the size of the attachment and resend the email.", "impact": "Yes"}]
+2025-04-13 16:36:24,558 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-13 16:36:24,728 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-13 16:36:24,728 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-13 16:36:24,728 - EmailAnalysisAssistant - DEBUG - 成功加载 cases.txt
+2025-04-13 16:36:24,728 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-13 16:36:24,729 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "F", "processed_state": "F", "error_message": "attachment too large", "create_ticket": "", "ticket_id": ""}
+2025-04-13 16:36:24,729 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-13 16:36:24,729 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-13 16:36:29,859 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "user",
+        "rootcause": "The email contains an attachment that is too large, which is causing the processing to fail.",
+        "action": "Please reduce the size of the attachment and resend the email.",
+        "impact": "Yes"
+    },
+    {
+        "type": "automation",
+        "rootcause": "The system is unable to process emails with large attachments.",
+        "action": "inbox",
+        "impact": "Yes"
+    }
+]
+2025-04-13 16:36:29,859 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "user", "rootcause": "The email contains an attachment that is too large, which is causing the processing to fail.", "action": "Please reduce the size of the attachment and resend the email.", "impact": "Yes"}, {"type": "automation", "rootcause": "The system is unable to process emails with large attachments.", "action": "inbox", "impact": "Yes"}]
+2025-04-13 16:48:55,694 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-13 16:48:55,875 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-13 16:48:55,876 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-13 16:48:55,876 - EmailAnalysisAssistant - DEBUG - 成功加载 cases.txt
+2025-04-13 16:48:55,876 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-13 16:48:55,876 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "F", "processed_state": "F", "error_message": "attachment too large", "create_ticket": "", "ticket_id": ""}
+2025-04-13 16:48:55,876 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-13 16:48:55,877 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-13 16:49:05,247 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "user",
+        "rootcause": "The email contains an attachment that is too large for the system to process.",
+        "action": "Please reduce the size of the attachment and resend the email.",
+        "impact": "No ticket is created or updated due to the large attachment."
+    },
+    {
+        "type": "automation",
+        "rootcause": "The system cannot handle attachments that exceed the size limit.",
+        "action": "inbox",
+        "impact": "No ticket is created or updated due to the large attachment."
+    }
+]
+2025-04-13 16:49:05,247 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "user", "rootcause": "The email contains an attachment that is too large for the system to process.", "action": "Please reduce the size of the attachment and resend the email.", "impact": "No ticket is created or updated due to the large attachment."}, {"type": "automation", "rootcause": "The system cannot handle attachments that exceed the size limit.", "action": "inbox", "impact": "No ticket is created or updated due to the large attachment."}]
+2025-04-13 16:51:05,724 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-13 16:51:05,882 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-13 16:51:05,882 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-13 16:51:05,882 - EmailAnalysisAssistant - DEBUG - 成功加载 cases.txt
+2025-04-13 16:51:05,882 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-13 16:51:05,882 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "F", "processed_state": "F", "error_message": "attachment too large", "create_ticket": "", "ticket_id": ""}
+2025-04-13 16:51:05,882 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-13 16:51:05,883 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-13 16:51:27,294 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "dev",
+        "rootcause": "The system failed to process the email due to an attachment that is too large. This issue is caused by the system's limitation in handling large attachments, which needs to be addressed by enhancing the system's capability to manage larger files.",
+        "action": "Enhance the system to handle larger attachments by either increasing the size limit or implementing a mechanism to split and process large files.",
+        "impact": "Yes, the business impact is significant as the ticket creation or update process is halted due to the inability to handle large attachments, affecting the overall workflow."
+    },
+    {
+        "type": "user",
+        "rootcause": "The email could not be processed because it contains an attachment that is too large. To resolve this issue, the user should reduce the size of the attachment before resending the email.",
+        "action": "Please compress or split the large attachment into smaller files and resend the email.",
+        "impact": "Yes, the business impact is significant as the ticket creation or update process is halted due to the inability to handle large attachments, affecting the overall workflow."
+    }
+]
+2025-04-13 16:51:27,294 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "dev", "rootcause": "The system failed to process the email due to an attachment that is too large. This issue is caused by the system's limitation in handling large attachments, which needs to be addressed by enhancing the system's capability to manage larger files.", "action": "Enhance the system to handle larger attachments by either increasing the size limit or implementing a mechanism to split and process large files.", "impact": "Yes, the business impact is significant as the ticket creation or update process is halted due to the inability to handle large attachments, affecting the overall workflow."}, {"type": "user", "rootcause": "The email could not be processed because it contains an attachment that is too large. To resolve this issue, the user should reduce the size of the attachment before resending the email.", "action": "Please compress or split the large attachment into smaller files and resend the email.", "impact": "Yes, the business impact is significant as the ticket creation or update process is halted due to the inability to handle large attachments, affecting the overall workflow."}]
+2025-04-13 16:52:28,696 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-13 16:52:28,875 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-13 16:52:28,875 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-13 16:52:28,875 - EmailAnalysisAssistant - DEBUG - 成功加载 cases.txt
+2025-04-13 16:52:28,875 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-13 16:52:28,875 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "F", "processed_state": "F", "error_message": "exchange service not available", "create_ticket": "N", "ticket_id": "XM5245 update!"}
+2025-04-13 16:52:28,876 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-13 16:52:28,876 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-13 16:52:34,109 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "automation",
+        "rootcause": "exchange service not available",
+        "action": "inbox",
+        "impact": "No"
+    }
+]
+2025-04-13 16:52:34,109 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "automation", "rootcause": "exchange service not available", "action": "inbox", "impact": "No"}]
+2025-04-13 16:53:32,586 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-13 16:53:32,755 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-13 16:53:32,756 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-13 16:53:32,756 - EmailAnalysisAssistant - DEBUG - 成功加载 cases.txt
+2025-04-13 16:53:32,756 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-13 16:53:32,756 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "F", "processed_state": "F", "error_message": "exchange service not available", "create_ticket": "N", "ticket_id": "XM5245 update!"}
+2025-04-13 16:53:32,756 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-13 16:53:32,757 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-13 16:53:35,477 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "automation",
+        "rootcause": "exchange service not available",
+        "action": "inbox",
+        "impact": "No"
+    }
+]
+2025-04-13 16:53:35,477 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "automation", "rootcause": "exchange service not available", "action": "inbox", "impact": "No"}]
+2025-04-13 16:55:38,252 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-13 16:55:38,432 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-13 16:55:38,432 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-13 16:55:38,432 - EmailAnalysisAssistant - DEBUG - 成功加载 cases.txt
+2025-04-13 16:55:38,433 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-13 16:55:38,433 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "F", "processed_state": "F", "error_message": "exchange service not available", "create_ticket": "N", "ticket_id": "XM5245 update!"}
+2025-04-13 16:55:38,433 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-13 16:55:38,434 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-13 16:55:42,950 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "automation",
+        "rootcause": "exchange service not available",
+        "action": "inbox",
+        "impact": "No"
+    }
+]
+2025-04-13 16:55:42,950 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "automation", "rootcause": "exchange service not available", "action": "inbox", "impact": "No"}]
+2025-04-13 16:57:44,124 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-13 16:57:44,297 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-13 16:57:44,297 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-13 16:57:44,297 - EmailAnalysisAssistant - DEBUG - 成功加载 cases.txt
+2025-04-13 16:57:44,298 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-13 16:57:44,298 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "F", "processed_state": "F", "error_message": "exchange service not available", "create_ticket": "N", "ticket_id": "XM5245 update!"}
+2025-04-13 16:57:44,298 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-13 16:57:44,298 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-13 16:57:46,849 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "automation",
+        "rootcause": "exchange service not available",
+        "action": "inbox",
+        "impact": "No"
+    }
+]
+2025-04-13 16:57:46,849 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "automation", "rootcause": "exchange service not available", "action": "inbox", "impact": "No"}]
+2025-04-13 16:59:31,134 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-13 16:59:31,306 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-13 16:59:31,306 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-13 16:59:31,306 - EmailAnalysisAssistant - DEBUG - 成功加载 cases.txt
+2025-04-13 16:59:31,307 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-13 16:59:31,307 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "F", "processed_state": "F", "error_message": "exchange service not available", "create_ticket": "N", "ticket_id": "XM5245 update!"}
+2025-04-13 16:59:31,308 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-13 16:59:31,308 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-13 16:59:36,172 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "automation",
+        "rootcause": "exchange service not available",
+        "action": "inbox",
+        "impact": "No"
+    }
+]
+2025-04-13 16:59:36,172 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "automation", "rootcause": "exchange service not available", "action": "inbox", "impact": "No"}]
+2025-04-13 17:01:16,389 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-13 17:01:16,553 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-13 17:01:16,553 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-13 17:01:16,553 - EmailAnalysisAssistant - DEBUG - 成功加载 cases.txt
+2025-04-13 17:01:16,554 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-13 17:01:16,554 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "F", "processed_state": "F", "error_message": "exchange service not available", "create_ticket": "N", "ticket_id": "XM5245 update!"}
+2025-04-13 17:01:16,554 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-13 17:01:16,554 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-13 17:01:20,753 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "automation",
+        "rootcause": "exchange service not available",
+        "action": "inbox",
+        "impact": "No"
+    }
+]
+2025-04-13 17:01:20,753 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "automation", "rootcause": "exchange service not available", "action": "inbox", "impact": "No"}]
+2025-04-13 17:02:21,281 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-13 17:02:21,447 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-13 17:02:21,447 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-13 17:02:21,447 - EmailAnalysisAssistant - DEBUG - 成功加载 cases.txt
+2025-04-13 17:02:21,447 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-13 17:02:21,448 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "F", "processed_state": "F", "error_message": "exchange service not available", "create_ticket": "N", "ticket_id": "XM5245 update!"}
+2025-04-13 17:02:21,448 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-13 17:02:21,448 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-13 17:02:24,306 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "automation",
+        "rootcause": "exchange service not available",
+        "action": "inbox",
+        "impact": "No"
+    }
+]
+2025-04-13 17:02:24,306 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "automation", "rootcause": "exchange service not available", "action": "inbox", "impact": "No"}]
+2025-04-13 17:02:48,383 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-13 17:02:48,543 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-13 17:02:48,543 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-13 17:02:48,544 - EmailAnalysisAssistant - DEBUG - 成功加载 cases.txt
+2025-04-13 17:02:48,544 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-13 17:02:48,544 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "F", "processed_state": "F", "error_message": "exchange service not available", "create_ticket": "N", "ticket_id": "XM5245 update!"}
+2025-04-13 17:02:48,544 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-13 17:02:48,544 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-13 17:02:52,656 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "automation",
+        "rootcause": "exchange service not available",
+        "action": "inbox",
+        "impact": "No"
+    }
+]
+2025-04-13 17:02:52,657 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "automation", "rootcause": "exchange service not available", "action": "inbox", "impact": "No"}]
+2025-04-13 17:04:15,383 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-13 17:04:15,557 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-13 17:04:15,557 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-13 17:04:15,558 - EmailAnalysisAssistant - DEBUG - 成功加载 cases.txt
+2025-04-13 17:04:15,558 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-13 17:04:15,558 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "F", "processed_state": "F", "error_message": "exchange service not available", "create_ticket": "N", "ticket_id": "XM5245 update!"}
+2025-04-13 17:04:15,558 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-13 17:04:15,558 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-13 17:04:20,210 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "automation",
+        "rootcause": "exchange service not available",
+        "action": "inbox",
+        "impact": "No"
+    }
+]
+2025-04-13 17:04:20,210 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "automation", "rootcause": "exchange service not available", "action": "inbox", "impact": "No"}]
+2025-04-13 17:04:31,482 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-13 17:04:31,679 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-13 17:04:31,679 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-13 17:04:31,679 - EmailAnalysisAssistant - DEBUG - 成功加载 cases.txt
+2025-04-13 17:04:31,680 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-13 17:04:31,680 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "F", "processed_state": "F", "error_message": "exchange service not available", "create_ticket": "N", "ticket_id": "XM5245 update!"}
+2025-04-13 17:04:31,680 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-13 17:04:31,681 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-13 17:04:47,220 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+{
+"type": "automation",
+"rootcause": "Exchange service not available, indicating a temporary resource/network issue with the email service",
+"action": "inbox",
+"impact": "Ticket update delayed but not lost (ticket_id exists), no permanent business impact"
+},
+{
+"type": "automation",
+"rootcause": "Ticket update was successful (ticket_id contains valid update marker) despite the service error",
+"action": "update",
+"impact": "No business impact as the update was ultimately processed"
+}
+]
+2025-04-13 17:04:47,220 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "automation", "rootcause": "Exchange service not available, indicating a temporary resource/network issue with the email service", "action": "inbox", "impact": "Ticket update delayed but not lost (ticket_id exists), no permanent business impact"}, {"type": "automation", "rootcause": "Ticket update was successful (ticket_id contains valid update marker) despite the service error", "action": "update", "impact": "No business impact as the update was ultimately processed"}]
+2025-04-13 17:06:51,422 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-13 17:06:51,602 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-13 17:06:51,603 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-13 17:06:51,603 - EmailAnalysisAssistant - DEBUG - 成功加载 cases.txt
+2025-04-13 17:06:51,603 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-13 17:06:51,603 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "F", "processed_state": "F", "error_message": "exchange service not available", "create_ticket": "N", "ticket_id": "XM5245 update!"}
+2025-04-13 17:06:51,603 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-13 17:06:51,603 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-13 17:06:57,830 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+{
+"type": "automation",
+"rootcause": "Exchange service not available, indicating a temporary resource issue with the email service.",
+"action": "inbox",
+"impact": "The ticket update operation was not completed due to the service unavailability, which may delay the ticket update process."
+}
+]
+2025-04-13 17:06:57,830 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "automation", "rootcause": "Exchange service not available, indicating a temporary resource issue with the email service.", "action": "inbox", "impact": "The ticket update operation was not completed due to the service unavailability, which may delay the ticket update process."}]
+2025-04-13 17:08:36,612 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-13 17:08:36,782 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-13 17:08:36,783 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-13 17:08:36,783 - EmailAnalysisAssistant - DEBUG - 成功加载 cases.txt
+2025-04-13 17:08:36,784 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-13 17:08:36,784 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "F", "processed_state": "F", "error_message": "exchange service not available", "create_ticket": "N", "ticket_id": "XM5245 update!"}
+2025-04-13 17:08:36,784 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-13 17:08:36,784 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-13 17:09:01,526 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+{
+"type": "automation",
+"rootcause": "exchange service not available",
+"action": "inbox",
+"impact": "yes"
+},
+{
+"type": "dev",
+"rootcause": "exchange service connection issue",
+"action": "check and fix exchange service connection",
+"impact": "yes"
+}
+]
+2025-04-13 17:09:01,526 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "automation", "rootcause": "exchange service not available", "action": "inbox", "impact": "yes"}, {"type": "dev", "rootcause": "exchange service connection issue", "action": "check and fix exchange service connection", "impact": "yes"}]
+2025-04-13 17:10:16,228 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-13 17:10:16,391 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-13 17:10:16,391 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-13 17:10:16,391 - EmailAnalysisAssistant - DEBUG - 成功加载 cases.txt
+2025-04-13 17:10:16,392 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-13 17:10:16,392 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "F", "processed_state": "F", "error_message": "exchange service not available", "create_ticket": "N", "ticket_id": "XM5245 update!"}
+2025-04-13 17:10:16,392 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-13 17:10:16,392 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-13 17:10:29,413 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+{
+    "type": "automation",
+    "rootcause": "exchange service not available",
+    "action": "inbox",
+    "impact": "yes"
+}
+]
+2025-04-13 17:10:29,413 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "automation", "rootcause": "exchange service not available", "action": "inbox", "impact": "yes"}]
+2025-04-13 17:10:51,064 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-13 17:10:51,241 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-13 17:10:51,241 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-13 17:10:51,241 - EmailAnalysisAssistant - DEBUG - 成功加载 cases.txt
+2025-04-13 17:10:51,241 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-13 17:10:51,242 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "F", "processed_state": "F", "error_message": "exchange service not available", "create_ticket": "N", "ticket_id": "XM5245 update!"}
+2025-04-13 17:10:51,242 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-13 17:10:51,242 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-13 17:11:08,030 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+{
+"type": "automation",
+"rootcause": "Exchange service not available, indicating a temporary resource issue with the email service",
+"action": "inbox",
+"impact": "Potential delay in ticket update, but no permanent business impact as the ticket_id indicates the update was previously successful"
+}
+]
+2025-04-13 17:11:08,030 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "automation", "rootcause": "Exchange service not available, indicating a temporary resource issue with the email service", "action": "inbox", "impact": "Potential delay in ticket update, but no permanent business impact as the ticket_id indicates the update was previously successful"}]
+2025-04-13 17:12:39,651 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-13 17:12:39,827 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-13 17:12:39,828 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-13 17:12:39,828 - EmailAnalysisAssistant - DEBUG - 成功加载 cases.txt
+2025-04-13 17:12:39,829 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-13 17:12:39,829 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "F", "processed_state": "F", "error_message": "exchange service not available", "create_ticket": "N", "ticket_id": "XM5245 update!"}
+2025-04-13 17:12:39,829 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-13 17:12:39,829 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-13 17:12:52,033 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+{
+    "type": "automation",
+    "rootcause": "Exchange service not available, indicating a temporary resource or connectivity issue with the email service.",
+    "action": "inbox",
+    "impact": "No business impact as the ticket (XM5245) was successfully updated despite the error."
+}
+]
+2025-04-13 17:12:52,033 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "automation", "rootcause": "Exchange service not available, indicating a temporary resource or connectivity issue with the email service.", "action": "inbox", "impact": "No business impact as the ticket (XM5245) was successfully updated despite the error."}]
+2025-04-13 17:13:43,241 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-13 17:13:43,425 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-13 17:13:43,425 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-13 17:13:43,425 - EmailAnalysisAssistant - DEBUG - 成功加载 cases.txt
+2025-04-13 17:13:43,425 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-13 17:13:43,426 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "F", "processed_state": "F", "error_message": "exchange service not available", "create_ticket": "N", "ticket_id": "XM5245 update!"}
+2025-04-13 17:13:43,426 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-13 17:13:43,426 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-13 17:14:39,444 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-13 17:14:39,623 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-13 17:14:39,623 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-13 17:14:39,623 - EmailAnalysisAssistant - DEBUG - 成功加载 cases.txt
+2025-04-13 17:14:39,624 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-13 17:14:39,624 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "F", "processed_state": "F", "error_message": "exchange service not available", "create_ticket": "N", "ticket_id": "XM5245 update!"}
+2025-04-13 17:14:39,624 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-13 17:14:39,624 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-13 17:14:43,271 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "automation",
+        "rootcause": "exchange service not available",
+        "action": "inbox",
+        "impact": "No"
+    }
+]
+2025-04-13 17:14:43,271 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "automation", "rootcause": "exchange service not available", "action": "inbox", "impact": "No"}]
+2025-04-13 17:15:46,383 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-13 17:15:46,562 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-13 17:15:46,562 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-13 17:15:46,562 - EmailAnalysisAssistant - DEBUG - 成功加载 cases.txt
+2025-04-13 17:15:46,563 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-13 17:15:46,563 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "F", "processed_state": "F", "error_message": "exchange service not available", "create_ticket": "N", "ticket_id": "XM5245 update!"}
+2025-04-13 17:15:46,563 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-13 17:15:46,563 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-13 17:15:50,034 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "automation",
+        "rootcause": "exchange service not available",
+        "action": "update",
+        "impact": "no"
+    }
+]
+2025-04-13 17:15:50,034 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "automation", "rootcause": "exchange service not available", "action": "update", "impact": "no"}]
+2025-04-13 17:16:17,510 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-13 17:16:17,672 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-13 17:16:17,672 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-13 17:16:17,672 - EmailAnalysisAssistant - DEBUG - 成功加载 cases.txt
+2025-04-13 17:16:17,672 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-13 17:16:17,672 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "F", "processed_state": "F", "error_message": "\n### Error updating database.  Cause: com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'note' at row 1\n### The error may exist in com/example/email/repository/TicketRepository.java (best guess)\n### The error may involve com.example.email.repository.TicketRepository.updateTicket-Inline\n### The error occurred while setting parameters\n### SQL: UPDATE ticket SET note = ?, update_count = ?, attachments = ? WHERE ticket_id = ?\n### Cause: com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'note' at row 1\n; Data truncation: Data too long for column 'note' at row 1; nested exception is com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'note' at row 1\n", "create_ticket": "N", "ticket_id": ""}
+2025-04-13 17:16:17,673 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-13 17:16:17,673 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-13 17:16:24,980 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "dev",
+        "rootcause": "The error is caused by attempting to update the 'note' column in the 'ticket' table with data that exceeds the column's maximum allowed length. This results in a 'Data truncation' error. The error message indicates that the 'note' column in the database schema has a length constraint that is too small to accommodate the data being inserted.",
+        "action": "Modify the database schema to increase the maximum length of the 'note' column in the 'ticket' table. This will allow for longer text entries without causing data truncation errors.",
+        "impact": "Yes, the business impact is significant as the system is unable to update tickets with the necessary information, which could lead to incomplete or inaccurate ticket records."
+    }
+]
+2025-04-13 17:16:24,980 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "dev", "rootcause": "The error is caused by attempting to update the 'note' column in the 'ticket' table with data that exceeds the column's maximum allowed length. This results in a 'Data truncation' error. The error message indicates that the 'note' column in the database schema has a length constraint that is too small to accommodate the data being inserted.", "action": "Modify the database schema to increase the maximum length of the 'note' column in the 'ticket' table. This will allow for longer text entries without causing data truncation errors.", "impact": "Yes, the business impact is significant as the system is unable to update tickets with the necessary information, which could lead to incomplete or inaccurate ticket records."}]
+2025-04-13 17:17:24,264 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-13 17:17:24,430 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-13 17:17:24,430 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-13 17:17:24,430 - EmailAnalysisAssistant - DEBUG - 成功加载 cases.txt
+2025-04-13 17:17:24,430 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-13 17:17:24,430 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "F", "processed_state": "F", "error_message": "attachment too large", "create_ticket": "", "ticket_id": ""}
+2025-04-13 17:17:24,431 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-13 17:17:24,431 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-13 17:17:34,556 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "dev",
+        "rootcause": "The system failed to process the email due to an attachment that is too large. This issue is caused by the system's limitation in handling large attachments.",
+        "action": "Modify the system to handle larger attachments or implement a mechanism to split large attachments into smaller parts for processing.",
+        "impact": "Yes, the business impact is that the ticket was not created or updated due to the failure in processing the email."
+    },
+    {
+        "type": "user",
+        "rootcause": "The email could not be processed because it contains an attachment that is too large. This is a limitation of the current system.",
+        "action": "Please reduce the size of the attachment or split it into smaller files before sending the email.",
+        "impact": "Yes, the business impact is that the ticket was not created or updated due to the failure in processing the email."
+    }
+]
+2025-04-13 17:17:34,556 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "dev", "rootcause": "The system failed to process the email due to an attachment that is too large. This issue is caused by the system's limitation in handling large attachments.", "action": "Modify the system to handle larger attachments or implement a mechanism to split large attachments into smaller parts for processing.", "impact": "Yes, the business impact is that the ticket was not created or updated due to the failure in processing the email."}, {"type": "user", "rootcause": "The email could not be processed because it contains an attachment that is too large. This is a limitation of the current system.", "action": "Please reduce the size of the attachment or split it into smaller files before sending the email.", "impact": "Yes, the business impact is that the ticket was not created or updated due to the failure in processing the email."}]
+2025-04-13 17:18:10,928 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-13 17:18:11,108 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-13 17:18:11,108 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-13 17:18:11,109 - EmailAnalysisAssistant - DEBUG - 成功加载 cases.txt
+2025-04-13 17:18:11,109 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-13 17:18:11,109 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "F", "processed_state": "F", "error_message": "数据库连接失败", "create_ticket": "", "ticket_id": ""}
+2025-04-13 17:18:11,109 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-13 17:18:11,109 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-13 17:18:13,994 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "automation",
+        "rootcause": "Database connection failure",
+        "action": "inbox",
+        "impact": "No"
+    }
+]
+2025-04-13 17:18:13,994 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "automation", "rootcause": "Database connection failure", "action": "inbox", "impact": "No"}]
+2025-04-13 17:19:40,341 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-13 17:19:40,514 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-13 17:19:40,514 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-13 17:19:40,514 - EmailAnalysisAssistant - DEBUG - 成功加载 cases.txt
+2025-04-13 17:19:40,515 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-13 17:19:40,515 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "F", "processed_state": "F", "error_message": "数据库连接失败", "create_ticket": "", "ticket_id": ""}
+2025-04-13 17:19:40,515 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-13 17:19:40,515 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-13 17:19:43,080 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "automation",
+        "rootcause": "Database connection failure",
+        "action": "inbox",
+        "impact": "Yes"
+    }
+]
+2025-04-13 17:19:43,081 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "automation", "rootcause": "Database connection failure", "action": "inbox", "impact": "Yes"}]
+2025-04-13 17:20:02,935 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-13 17:20:03,107 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-13 17:20:03,108 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-13 17:20:03,108 - EmailAnalysisAssistant - DEBUG - 成功加载 cases.txt
+2025-04-13 17:20:03,108 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-13 17:20:03,108 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "Y", "processed_state": "Y", "error_message": "", "create_ticket": "", "ticket_id": "XM5245 update!"}
+2025-04-13 17:20:03,109 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-13 17:20:03,109 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-13 17:20:05,330 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "automation",
+        "rootcause": "Ticket update successful",
+        "action": "update",
+        "impact": "No impact"
+    }
+]
+2025-04-13 17:20:05,330 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "automation", "rootcause": "Ticket update successful", "action": "update", "impact": "No impact"}]
+2025-04-13 17:20:13,252 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-13 17:20:13,428 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-13 17:20:13,428 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-13 17:20:13,428 - EmailAnalysisAssistant - DEBUG - 成功加载 cases.txt
+2025-04-13 17:20:13,429 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-13 17:20:13,429 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "Y", "processed_state": "Y", "error_message": "", "create_ticket": "", "ticket_id": "XM5245 update!"}
+2025-04-13 17:20:13,429 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-13 17:20:13,429 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-13 17:20:16,663 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "automation",
+        "rootcause": "Ticket update successful",
+        "action": "update",
+        "impact": "No impact"
+    }
+]
+2025-04-13 17:20:16,663 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "automation", "rootcause": "Ticket update successful", "action": "update", "impact": "No impact"}]
+2025-04-13 17:20:26,990 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-13 17:20:27,168 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-13 17:20:27,168 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-13 17:20:27,168 - EmailAnalysisAssistant - DEBUG - 成功加载 cases.txt
+2025-04-13 17:20:27,169 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-13 17:20:27,169 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "F", "processed_state": "I", "error_message": "", "create_ticket": "", "ticket_id": ""}
+2025-04-13 17:20:27,169 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-13 17:20:27,169 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-13 17:20:30,675 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "automation",
+        "rootcause": "The email does not require processing as indicated by processed_state = I.",
+        "action": "ignore",
+        "impact": "No business impact as the email is marked to be ignored."
+    }
+]
+2025-04-13 17:20:30,675 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "automation", "rootcause": "The email does not require processing as indicated by processed_state = I.", "action": "ignore", "impact": "No business impact as the email is marked to be ignored."}]
+2025-04-13 17:20:58,486 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-13 17:20:58,652 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-13 17:20:58,652 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-13 17:20:58,652 - EmailAnalysisAssistant - DEBUG - 成功加载 cases.txt
+2025-04-13 17:20:58,652 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-13 17:20:58,652 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "F", "processed_state": "F", "error_message": "exchange service not available", "create_ticket": "", "ticket_id": ""}
+2025-04-13 17:20:58,652 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-13 17:20:58,652 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-13 17:21:04,202 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "automation",
+        "rootcause": "exchange service not available",
+        "action": "inbox",
+        "impact": "yes"
+    }
+]
+2025-04-13 17:21:04,202 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "automation", "rootcause": "exchange service not available", "action": "inbox", "impact": "yes"}]
+2025-04-13 17:21:15,762 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-13 17:21:15,932 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-13 17:21:15,932 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-13 17:21:15,932 - EmailAnalysisAssistant - DEBUG - 成功加载 cases.txt
+2025-04-13 17:21:15,933 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-13 17:21:15,933 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "F", "processed_state": "F", "error_message": "exchange service not available", "create_ticket": "N", "ticket_id": "XM5245 update!"}
+2025-04-13 17:21:15,933 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-13 17:21:15,933 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-13 17:21:18,672 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "automation",
+        "rootcause": "exchange service not available",
+        "action": "update",
+        "impact": "no"
+    }
+]
+2025-04-13 17:21:18,672 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "automation", "rootcause": "exchange service not available", "action": "update", "impact": "no"}]
+2025-04-13 17:23:23,105 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-13 17:23:23,269 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-13 17:23:23,269 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-13 17:23:23,269 - EmailAnalysisAssistant - DEBUG - 成功加载 cases.txt
+2025-04-13 17:23:23,269 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-13 17:23:23,269 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "F", "processed_state": "F", "error_message": "exchange service not available", "create_ticket": "N", "ticket_id": "XM5245 update!"}
+2025-04-13 17:23:23,269 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-13 17:23:23,270 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-13 17:23:27,595 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "automation",
+        "rootcause": "exchange service not available",
+        "action": "update",
+        "impact": "No, ticket update was successful."
+    }
+]
+2025-04-13 17:23:27,595 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "automation", "rootcause": "exchange service not available", "action": "update", "impact": "No, ticket update was successful."}]
+2025-04-13 17:23:45,003 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-13 17:23:45,171 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-13 17:23:45,172 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-13 17:23:45,172 - EmailAnalysisAssistant - DEBUG - 成功加载 cases.txt
+2025-04-13 17:23:45,172 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-13 17:23:45,172 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "F", "processed_state": "I", "error_message": "", "create_ticket": "", "ticket_id": ""}
+2025-04-13 17:23:45,172 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-13 17:23:45,173 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-13 17:23:48,606 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "automation",
+        "rootcause": "The email does not require processing as indicated by processed_state = I.",
+        "action": "ignore",
+        "impact": "No, the email does not require processing and thus has no business impact."
+    }
+]
+2025-04-13 17:23:48,606 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "automation", "rootcause": "The email does not require processing as indicated by processed_state = I.", "action": "ignore", "impact": "No, the email does not require processing and thus has no business impact."}]
+2025-04-13 17:24:11,476 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-13 17:24:11,642 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-13 17:24:11,642 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-13 17:24:11,642 - EmailAnalysisAssistant - DEBUG - 成功加载 cases.txt
+2025-04-13 17:24:11,642 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-13 17:24:11,643 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "F", "processed_state": "F", "error_message": "attachment too large", "create_ticket": "", "ticket_id": ""}
+2025-04-13 17:24:11,643 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-13 17:24:11,643 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-13 17:24:29,606 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "dev",
+        "rootcause": "The system failed to process the email due to an attachment that is too large. This issue is caused by the system's limitation in handling large attachments, which needs to be addressed by enhancing the system's capability to manage larger files.",
+        "action": "Enhance the system to handle larger attachments by either increasing the size limit or implementing a mechanism to split and process large files.",
+        "impact": "Yes, the email was not processed and no ticket was created or updated, which may affect related business operations."
+    },
+    {
+        "type": "user",
+        "rootcause": "The email could not be processed because it contains an attachment that is too large. This issue can be resolved by reducing the size of the attachment before resending the email.",
+        "action": "Please reduce the size of the attachment and resend the email.",
+        "impact": "Yes, the email was not processed and no ticket was created or updated, which may affect related business operations."
+    }
+]
+2025-04-13 17:24:29,606 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "dev", "rootcause": "The system failed to process the email due to an attachment that is too large. This issue is caused by the system's limitation in handling large attachments, which needs to be addressed by enhancing the system's capability to manage larger files.", "action": "Enhance the system to handle larger attachments by either increasing the size limit or implementing a mechanism to split and process large files.", "impact": "Yes, the email was not processed and no ticket was created or updated, which may affect related business operations."}, {"type": "user", "rootcause": "The email could not be processed because it contains an attachment that is too large. This issue can be resolved by reducing the size of the attachment before resending the email.", "action": "Please reduce the size of the attachment and resend the email.", "impact": "Yes, the email was not processed and no ticket was created or updated, which may affect related business operations."}]
+2025-04-13 17:24:59,158 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-13 17:24:59,333 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-13 17:24:59,334 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-13 17:24:59,334 - EmailAnalysisAssistant - DEBUG - 成功加载 cases.txt
+2025-04-13 17:24:59,334 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-13 17:24:59,334 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "F", "processed_state": "F", "error_message": "\n### Error updating database.  Cause: com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'note' at row 1\n### The error may exist in com/example/email/repository/TicketRepository.java (best guess)\n### The error may involve com.example.email.repository.TicketRepository.updateTicket-Inline\n### The error occurred while setting parameters\n### SQL: UPDATE ticket SET note = ?, update_count = ?, attachments = ? WHERE ticket_id = ?\n### Cause: com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'note' at row 1\n; Data truncation: Data too long for column 'note' at row 1; nested exception is com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'note' at row 1\n", "create_ticket": "N", "ticket_id": ""}
+2025-04-13 17:24:59,334 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-13 17:24:59,334 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-13 17:25:15,754 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "dev",
+        "rootcause": "The error is caused by attempting to update the 'note' column in the 'ticket' table with data that exceeds the column's maximum allowed length. This results in a 'Data truncation' error. The error occurred while executing an SQL UPDATE statement to modify the 'note', 'update_count', and 'attachments' columns for a specific 'ticket_id'.",
+        "action": "Increase the maximum allowed length for the 'note' column in the 'ticket' table to accommodate longer text entries. Alternatively, implement data truncation or summarization logic to ensure that the 'note' column does not exceed its current length limit during updates.",
+        "impact": "Yes, the inability to update the ticket due to the 'note' column's length constraint prevents the system from recording essential email content and attachments, which could affect business operations and ticket management."
+    }
+]
+2025-04-13 17:25:15,754 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "dev", "rootcause": "The error is caused by attempting to update the 'note' column in the 'ticket' table with data that exceeds the column's maximum allowed length. This results in a 'Data truncation' error. The error occurred while executing an SQL UPDATE statement to modify the 'note', 'update_count', and 'attachments' columns for a specific 'ticket_id'.", "action": "Increase the maximum allowed length for the 'note' column in the 'ticket' table to accommodate longer text entries. Alternatively, implement data truncation or summarization logic to ensure that the 'note' column does not exceed its current length limit during updates.", "impact": "Yes, the inability to update the ticket due to the 'note' column's length constraint prevents the system from recording essential email content and attachments, which could affect business operations and ticket management."}]

@@ -1,0 +1,64 @@
+你帮我构建一个 【监控邮件处理失败】的系统。主要帮我完成两个部分。
+第一部分：大模型辅助分析决策系统（LLMHelper.py）
+这个LLMHelper.py文件基本实现了向大语言模型问答的功能，配置了apikey和apibase，可以获得响应，保持这个方法，但已有的问答系统不满足我的功能，你需要修改代码。你需要完成我的新需求，编写功能接口，后续我的第二部分会调用这些功能。
+具体要求：
+我已经编写了 （1）邮件处理相关的业务逻辑（business.txt），和 （2）发现邮件处理失败后系统需要分析并作出决策的指导文件（actionGuidance.txt）。你给大语言模型设定提示词要将这两个文件作为基本知识输入。
+大语言辅助分析模型需要接收1个参数 email的具体信息（这个来源于DBService.py的def get_email_detail(self, email_id)方法），是一个json数据。
+你的提示词，需要将business.txt， actionGuidance.txt作为基本知识，然后email的具体信息是问题邮件的具体信息，需要根据actionGuidance.txt的指导 模型给出规定格式的响应（结果以json格式为元素的list。
+[{
+type：
+rootcause：
+action：
+},
+{
+type：
+rootcause：
+action：
+}.....]）。
+
+
+第二部分：邮件监控系统，这是主程序（Main.py）
+该系统是这个定时任务，每个2分钟通过emailService.py的 def get_messages_from_folder(self, folder_name: str)去获取"working" folder里面的邮件，记录下这些邮件。下一次定时任务获取继续获取"working" folder里面的邮件，
+如果上一次获取到的邮件在这一次依然出现（通过get_email_info返回值message_id来确认是否是同一份邮件），则这些重复出现的邮件就是”处理失败“的问题邮件（剩下的这些邮件保存，用来和下一次定时任务获取到的邮件进行比较，后面以此类推），
+我们需要遍历这每一个问题邮件，将这些邮件的具体信息（这个来源于DBService.py的def get_email_detail(self, email_id)方法）送入第一部分的大模型辅助分析决策系统，让这个模型给出决策。
+
+请帮我完成上述两个系统，并给出测试代码
+
+
+
+------------------------------------------------------------------------------
+
+目前只支持监控working folder的邮件，需要增加error folder。current_emails = self.get_working_folder_emails() ，current_emails应该是working folder和error folder所有邮件。
+同时current_emails 需要增加邮件的原始folder  
+                  emails_dict[email_info['message_id']] = {
+                        'email_id': email_id,
+                        'info': email_info，
+	       'source_folder':'working'/'error'
+                    }
+在移动邮件部分                if decision['type'] == 'automation':
+                    if decision['action'] == 'inbox':
+                        self.logger.info(f"将邮件 {email_id} 移动到 INBOX")
+                        self.email_service.move_message_to_folder(
+                            email_id, 'working', 'INBOX'
+                        )
+                    elif decision['action'] == 'error':
+                        self.logger.info(f"将邮件 {email_id} 移动到 error")
+                        self.email_service.move_message_to_folder(
+                            email_id, 'working', 'error'
+                        )
+                    elif decision['action'] == 'ignore':
+                        self.logger.info(f"将邮件 {email_id} 移动到 ignore")
+                        self.email_service.move_message_to_folder(
+                            email_id, 'working', 'ignore'
+                        )
+                    elif decision['action'] == 'create':
+                        self.logger.info(f"将邮件 {email_id} 移动到 create")
+                        self.email_service.move_message_to_folder(
+                            email_id, 'working', 'create'
+                        )
+优化上面代码，如果decision['type'] == 'automation'，必然就是移动文件，并且action就是目标文件夹，可以通过参数                        self.email_service.move_message_to_folder(
+                            email_id, source_folder, action
+                        )
+decision['type'] == 'dev'，则给指定邮箱发邮件（指定邮箱：zqiang_zhu@163.com，主题：有一封邮件消费失败，body：decision['rootcause']的内容）。
+
+

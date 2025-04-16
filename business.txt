@@ -1,0 +1,66 @@
+# 邮件处理系统业务说明文档
+
+
+## 一、邮箱文件夹结构
+- inbox：这个是网易邮箱默认收件箱
+- working：要被解析的邮件。这个文件夹里的邮件应该被及时消费，并移动到其他文件夹。不应该长时间卡在这个文件夹。
+- ignore：根据业务推断，邮件直接从working移动到这里，这个里面的邮件不需要下一步解析。
+- create：根据业务推断，邮件要对应创建一个ticket，创建之后邮件 移动到这里
+- update： 根据业务推断，邮件要对应更新一个ticket，更新之后邮件 移动到这里
+- error：整个程序运行过程中出现问题，则将邮件移动到error。
+
+
+## 二、核心业务流程
+1. emailservice读取inbox或者working文件夹里面的邮件，并根据相关逻辑创建或者更新ticket，之后再将邮件移动到相应的文件夹。
+2. 根据业务逻辑进行处理：
+   - 创建ticket：调用API创建 -> 更新email表 -> 邮件移至create文件夹
+   - 更新ticket：调用API更新 -> 更新email表 -> 邮件移至update文件夹
+   - 忽略处理：更新email表 -> 邮件移至ignore文件夹
+   - 处理失败：处理解析邮件的环节出现错误并且被程序catch -> 更新email表 -> 邮件移至error文件夹
+
+
+## 三、数据库表结构
+### 1. email表
+    - id INT AUTO_INCREMENT PRIMARY KEY：主键
+
+    - emailId VARCHAR(255) NOT NULL：邮箱每个邮件的唯一ID
+
+    - subject VARCHAR(255)：邮件主题
+
+    - sender VARCHAR(255)：发送者的邮箱
+
+    - receiver VARCHAR(255)：接收者的邮箱
+
+    - emailBody TEXT：邮件正文内容 和 附件的名字
+
+    - receiveTime DATETIME：邮件接收时间
+
+    - processed VARCHAR(255)：处理状态描述。如果为F，表示该邮件未被处理，有两种情况 1.邮件处理过程出现错误。2.邮件可忽略，无需处理。
+      如果为Y，该邮件被处理成功，更新或者创建ticket成功。如果ticket_id为空，即使processed为Y，也说明邮件处理失败
+      如果为F，且ticket_id为空，说明邮件处理失败。若为F，但ticket_id存在有效值，也认为邮件处理成功，邮件移动到update或create即可。
+    
+
+    - processed_state VARCHAR(255)：处理状态。如果为I，表示该邮件根据业务逻辑判断，不需处理，可忽略，邮件应该移动到ignore文件夹（此时processed为F）。
+      如果为Y，该邮件被处理成功，更新或者创建ticket成功（此时processed为Y）。该邮件应该被移动到update或者create文件夹
+      如果为F，该邮件被处理失败，更新或者创建ticket失败（此时processed为N），且ticket_id不存在有效值。该邮件应该被移动到error文件夹。
+
+    - error_message VARCHAR(5000)：错误信息，在处理解析邮件的过程中出现的错误会记录在这个字段，这个字段对分析邮件处理失败的原因至关重要。
+
+    - create_ticket VARCHAR(255)：如果create_ticket = Y 并且 ticket_id存在值，那么说明该邮件创建ticket成功；
+      如果create_ticket = N 或者为空，那么说明该邮件创建ticket失败；但是如果ticket_id有类似"X34 update!"的值，说明这是更新ticket的操作。
+
+    - ticket_id VARCHAR(255):工单ID，如果该邮件对应创建工单，则该字段会填充类似"XM202503171535"的值；
+      如果是更新工单则类似"XM202503171535 update！"；该字段有值代表ticket创建或更新已经成功。
+
+    - update_time DATETIME DEFAULT CURRENT_TIMESTAMP:更新时间
+
+
+### 2. ticket表
+
+    - id INT AUTO_INCREMENT PRIMARY KEY
+    - ticketid VARCHAR(255) NOT NULL
+    - subject VARCHAR(500) NOT NULL
+    - note longtext,  -- 记录更新的内容，每一次将对应的邮件内容body 和附件名字 记录在这个字段（原来的数据不删除）。每次更新加个标题 update：[邮件内容]。
+    - update_count INT DEFAULT 0,  --被更新的次数，第一次创建ticket，此时这个字段置为1
+    - updatetime DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP，
+    - attachments  --记录跟这个ticket关联的附件id，逗号分隔

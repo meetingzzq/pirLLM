@@ -1,0 +1,5 @@
+﻿Case ID,Subject,Error Message,LLM Analysis Type,Root Cause,Recommended Action
+1,数据库字段溢出,Data truncation: Data too long for column 'note' at row 1,dev,The error message 'Data truncation: Data too long for column 'note' at row 1' indicates that the 'note' column in the 'ticket' table is not able to accommodate the length of the data being inserted. This is likely due to the email content or attachments being too large for the current column size.,-1
+1,数据库字段溢出,Data truncation: Data too long for column 'note' at row 1,user,"The system is unable to process the email because the content or attachments are too large for the database column 'note'. This needs to be addressed by either reducing the size of the content or attachments, or by increasing the size limit of the 'note' column in the database.",-1
+4,创建成功案例,,automation,Ticket creation was successful.,create
+15,系统资源不足,System resources exhausted,automation,System resources exhausted,inbox

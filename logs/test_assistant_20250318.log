@@ -1,0 +1,18 @@
+2025-03-18 23:36:13,861 - test_assistant - INFO - 开始测试 EmailAnalysisAssistant...
+2025-03-18 23:36:14,105 - test_assistant - INFO - 执行测试用例...
+2025-03-18 23:36:21,082 - test_assistant - INFO - 测试结果: [
+  {
+    "type": "dev",
+    "rootcause": "Data truncation error due to the 'note' column being too long for the database schema. This is likely caused by the email content or attachments being too large.",
+    "action": -1
+  },
+  {
+    "type": "automation",
+    "rootcause": "impact",
+    "action": "error"
+  }
+]
+2025-03-18 23:36:21,083 - test_assistant - INFO - 测试完成
+2025-03-18 23:38:17,594 - test_assistant - INFO - 开始测试 EmailAnalysisAssistant...
+2025-03-18 23:38:17,835 - test_assistant - INFO - 执行测试用例...
+2025-03-18 23:38:21,864 - test_assistant - INFO - 测试完成

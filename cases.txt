@@ -1,0 +1,44 @@
+
+# 邮件处理场景常见案例
+
+## 前置检查
+检查email表中是否存在记录，重点关注字段：
+- processed
+- processed_state
+- error_message
+- create_ticket
+- ticket_id
+
+## 常见案例
+
+### 1. Ticket创建成功场景
+条件：
+- create_ticket = Y
+- ticket_id 有值 例如“XM353”
+结论：创建成功，仅需处理文件移动问题, 不需要考虑processed和processed_state，移动到create文件夹即可。
+
+### 2. Ticket更新成功场景
+条件：
+- create_ticket = N
+- ticket_id 有值，例如“XM111 update”
+结论：更新成功，仅需处理文件移动问题, 移动到update文件夹即可。
+
+### 3. 邮件无需处理场景
+条件：
+- processed = F
+- processed_state = I
+处理：移动至ignore文件夹
+
+### 4. 处理失败场景
+条件：
+- processed = F
+- processed_state = F
+- ticket_id 不存在有效值。
+
+
+
+
+
+
+
+

@@ -1,0 +1,1046 @@
+2025-04-06 15:14:29,834 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-06 15:14:30,088 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-06 15:14:30,088 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-06 15:14:30,088 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-06 15:14:30,089 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "F", "processed_state": "F", "error_message": "\n### Error updating database.  Cause: com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'note' at row 1\n### The error may exist in com/example/email/repository/TicketRepository.java (best guess)\n### The error may involve com.example.email.repository.TicketRepository.updateTicket-Inline\n### The error occurred while setting parameters\n### SQL: UPDATE ticket SET note = ?, update_count = ?, attachments = ? WHERE ticket_id = ?\n### Cause: com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'note' at row 1\n; Data truncation: Data too long for column 'note' at row 1; nested exception is com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'note' at row 1\n", "create_ticket": "N", "ticket_id": ""}
+2025-04-06 15:14:30,089 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-06 15:14:30,090 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-06 15:14:35,889 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "dev",
+        "rootcause": "Data truncation error due to the 'note' column in the 'ticket' table being too small to accommodate the email content and attachments. This is likely caused by an unusually large email body or a high number of attachments.",
+        "action": -1
+    },
+    {
+        "type": "automation",
+        "rootcause": "impact",
+        "action": "error"
+    }
+]
+2025-04-06 15:14:35,889 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "dev", "rootcause": "Data truncation error due to the 'note' column in the 'ticket' table being too small to accommodate the email content and attachments. This is likely caused by an unusually large email body or a high number of attachments.", "action": -1}, {"type": "automation", "rootcause": "impact", "action": "error"}]
+2025-04-06 15:17:14,570 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-06 15:17:14,742 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-06 15:17:14,742 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-06 15:17:24,417 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-06 15:17:24,584 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-06 15:17:24,584 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-06 15:17:24,585 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-06 15:17:24,585 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "F", "processed_state": "I", "error_message": "", "create_ticket": "N", "ticket_id": ""}
+2025-04-06 15:17:24,585 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-06 15:17:24,586 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-06 15:17:28,333 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "automation",
+        "rootcause": "no impact",
+        "action": "ignore"
+    }
+]
+2025-04-06 15:17:28,334 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "automation", "rootcause": "no impact", "action": "ignore"}]
+2025-04-06 15:19:17,953 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-06 15:19:18,130 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-06 15:19:18,130 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-06 15:19:18,131 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-06 15:19:18,131 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "F", "processed_state": "I", "error_message": "", "create_ticket": "N", "ticket_id": ""}
+2025-04-06 15:19:18,131 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-06 15:19:18,132 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-06 15:19:21,434 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "automation",
+        "rootcause": "邮件主题包含'ignore'，根据判断逻辑，该邮件被直接移动到ignore folder，无需进一步处理。",
+        "action": "ignore"
+    }
+]
+2025-04-06 15:19:21,434 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "automation", "rootcause": "邮件主题包含'ignore'，根据判断逻辑，该邮件被直接移动到ignore folder，无需进一步处理。", "action": "ignore"}]
+2025-04-06 15:19:48,818 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-06 15:19:48,986 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-06 15:19:48,986 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-06 15:19:48,986 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-06 15:19:48,987 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "F", "processed_state": "I", "error_message": "", "create_ticket": "N", "ticket_id": ""}
+2025-04-06 15:19:48,987 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-06 15:19:48,987 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-06 15:19:55,155 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "automation",
+        "rootcause": "The email subject contains the keyword 'ignore', which according to the business logic, should move the email to the ignore folder and update the processed and processed_state fields in the email table.",
+        "action": "ignore"
+    }
+]
+2025-04-06 15:19:55,155 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "automation", "rootcause": "The email subject contains the keyword 'ignore', which according to the business logic, should move the email to the ignore folder and update the processed and processed_state fields in the email table.", "action": "ignore"}]
+2025-04-06 15:20:18,984 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-06 15:20:19,155 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-06 15:20:19,155 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-06 15:20:19,156 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-06 15:20:19,156 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "F", "processed_state": "I", "error_message": "", "create_ticket": "N", "ticket_id": ""}
+2025-04-06 15:20:19,156 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-06 15:20:19,157 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-06 15:20:21,863 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "automation",
+        "rootcause": "The email was determined to be ignorable based on business logic, hence it was moved to the ignore folder.",
+        "action": "ignore"
+    }
+]
+2025-04-06 15:20:21,863 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "automation", "rootcause": "The email was determined to be ignorable based on business logic, hence it was moved to the ignore folder.", "action": "ignore"}]
+2025-04-06 15:21:17,999 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-06 15:21:18,168 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-06 15:21:18,169 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-06 15:21:18,169 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-06 15:21:18,169 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "Y", "processed_state": "Y", "error_message": "", "create_ticket": "Y", "ticket_id": "XM123"}
+2025-04-06 15:21:18,169 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-06 15:21:18,169 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-06 15:21:24,211 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "automation",
+        "rootcause": "The email has been successfully processed and a ticket was created.",
+        "action": "create"
+    }
+]
+2025-04-06 15:21:24,212 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "automation", "rootcause": "The email has been successfully processed and a ticket was created.", "action": "create"}]
+2025-04-06 15:21:37,461 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-06 15:21:37,627 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-06 15:21:37,627 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-06 15:21:37,628 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-06 15:21:37,628 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "Y", "processed_state": "Y", "error_message": "", "create_ticket": "Y", "ticket_id": ""}
+2025-04-06 15:21:37,628 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-06 15:21:37,629 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-06 15:21:43,242 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "automation",
+        "rootcause": "The email was successfully processed and a ticket was created, but the ticket_id field is empty, which indicates a potential issue in the ticket creation process or database insertion.",
+        "action": "create"
+    }
+]
+2025-04-06 15:21:43,242 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "automation", "rootcause": "The email was successfully processed and a ticket was created, but the ticket_id field is empty, which indicates a potential issue in the ticket creation process or database insertion.", "action": "create"}]
+2025-04-06 15:23:52,001 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-06 15:23:52,172 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-06 15:23:52,172 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-06 15:23:52,172 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-06 15:23:52,173 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "Y", "processed_state": "Y", "error_message": "", "create_ticket": "Y", "ticket_id": ""}
+2025-04-06 15:23:52,173 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-06 15:23:52,173 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-06 15:24:02,541 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "automation",
+        "rootcause": "The email was successfully processed (processed = Y and processed_state = Y), but the ticket_id is empty, indicating that the ticket creation failed despite the processing status suggesting success.",
+        "action": "error"
+    }
+]
+2025-04-06 15:24:02,541 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "automation", "rootcause": "The email was successfully processed (processed = Y and processed_state = Y), but the ticket_id is empty, indicating that the ticket creation failed despite the processing status suggesting success.", "action": "error"}]
+2025-04-06 15:24:28,313 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-06 15:24:28,480 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-06 15:24:28,480 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-06 15:24:28,481 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-06 15:24:28,481 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "F", "processed_state": "Y", "error_message": "", "create_ticket": "Y", "ticket_id": ""}
+2025-04-06 15:24:28,481 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-06 15:24:28,481 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-06 15:24:32,104 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "automation",
+        "rootcause": "The email was marked as processed successfully (processed_state: Y) but the ticket_id is empty, indicating that the ticket creation failed despite the system thinking it succeeded.",
+        "action": "error"
+    }
+]
+2025-04-06 15:24:32,104 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "automation", "rootcause": "The email was marked as processed successfully (processed_state: Y) but the ticket_id is empty, indicating that the ticket creation failed despite the system thinking it succeeded.", "action": "error"}]
+2025-04-06 15:25:02,274 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-06 15:25:02,436 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-06 15:25:02,436 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-06 15:25:02,437 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-06 15:25:02,437 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "F", "processed_state": "F", "error_message": "", "create_ticket": "Y", "ticket_id": ""}
+2025-04-06 15:25:02,437 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-06 15:25:02,438 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-06 15:25:05,968 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "automation",
+        "rootcause": "The email was marked for ticket creation (create_ticket = Y), but the ticket_id is empty, indicating that the ticket creation process failed. However, the error_message field is empty, suggesting that the failure was not caught by the system's error handling mechanism.",
+        "action": "error"
+    }
+]
+2025-04-06 15:25:05,968 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "automation", "rootcause": "The email was marked for ticket creation (create_ticket = Y), but the ticket_id is empty, indicating that the ticket creation process failed. However, the error_message field is empty, suggesting that the failure was not caught by the system's error handling mechanism.", "action": "error"}]
+2025-04-06 15:25:25,353 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-06 15:25:25,535 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-06 15:25:25,536 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-06 15:25:25,536 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-06 15:25:25,536 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "F", "processed_state": "F", "error_message": "", "create_ticket": "", "ticket_id": ""}
+2025-04-06 15:25:25,537 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-06 15:25:25,537 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-06 15:25:32,208 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "automation",
+        "rootcause": "The email has not been processed and there is no error message provided. This suggests that the email might have been overlooked or the processing logic did not trigger for this email.",
+        "action": "inbox"
+    }
+]
+2025-04-06 15:25:32,208 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "automation", "rootcause": "The email has not been processed and there is no error message provided. This suggests that the email might have been overlooked or the processing logic did not trigger for this email.", "action": "inbox"}]
+2025-04-06 15:26:31,435 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-06 15:26:31,599 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-06 15:26:31,599 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-06 15:26:31,599 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-06 15:26:31,600 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "F", "processed_state": "F", "error_message": "attachment too large", "create_ticket": "", "ticket_id": ""}
+2025-04-06 15:26:31,600 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-06 15:26:31,600 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-06 15:26:34,480 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "user",
+        "rootcause": "The email contains an attachment that is too large for the system to process. Please reduce the size of the attachment and resend the email.",
+        "action": -1
+    }
+]
+2025-04-06 15:26:34,480 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "user", "rootcause": "The email contains an attachment that is too large for the system to process. Please reduce the size of the attachment and resend the email.", "action": -1}]
+2025-04-06 15:26:59,659 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-06 15:26:59,820 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-06 15:26:59,820 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-06 15:26:59,821 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-06 15:26:59,821 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "F", "processed_state": "F", "error_message": "\n### Error updating database.  Cause: com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'note' at row 1\n### The error may exist in com/example/email/repository/TicketRepository.java (best guess)\n### The error may involve com.example.email.repository.TicketRepository.updateTicket-Inline\n### The error occurred while setting parameters\n### SQL: UPDATE ticket SET note = ?, update_count = ?, attachments = ? WHERE ticket_id = ?\n### Cause: com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'note' at row 1\n; Data truncation: Data too long for column 'note' at row 1; nested exception is com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'note' at row 1\n", "create_ticket": "N", "ticket_id": ""}
+2025-04-06 15:26:59,821 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-06 15:26:59,822 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-06 15:27:03,952 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "dev",
+        "rootcause": "The error is caused by attempting to update the 'note' column in the 'ticket' table with data that exceeds the maximum allowed length for that column. This results in a 'Data truncation' error. The error occurs in the 'TicketRepository.java' file while executing the SQL update statement.",
+        "action": -1
+    }
+]
+2025-04-06 15:27:03,952 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "dev", "rootcause": "The error is caused by attempting to update the 'note' column in the 'ticket' table with data that exceeds the maximum allowed length for that column. This results in a 'Data truncation' error. The error occurs in the 'TicketRepository.java' file while executing the SQL update statement.", "action": -1}]
+2025-04-06 15:29:17,125 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-06 15:29:17,298 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-06 15:29:17,298 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-06 15:29:17,298 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-06 15:29:17,299 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "F", "processed_state": "F", "error_message": "\n### Error updating database.  Cause: com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'note' at row 1\n### The error may exist in com/example/email/repository/TicketRepository.java (best guess)\n### The error may involve com.example.email.repository.TicketRepository.updateTicket-Inline\n### The error occurred while setting parameters\n### SQL: UPDATE ticket SET note = ?, update_count = ?, attachments = ? WHERE ticket_id = ?\n### Cause: com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'note' at row 1\n; Data truncation: Data too long for column 'note' at row 1; nested exception is com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'note' at row 1\n", "create_ticket": "N", "ticket_id": ""}
+2025-04-06 15:29:17,299 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-06 15:29:17,299 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-06 15:29:36,526 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "dev",
+        "rootcause": "The error is caused by attempting to update the 'note' column in the 'ticket' table with data that exceeds the maximum allowed length for that column. This results in a 'Data truncation' error. The error occurs in the 'TicketRepository.java' file while executing an SQL UPDATE statement to modify the 'note', 'update_count', and 'attachments' columns for a specific 'ticket_id'.",
+        "action": -1
+    },
+    {
+        "type": "user",
+        "rootcause": "The email content or attachments are too large to be processed. Please reduce the size of the email content or attachments and resend the email.",
+        "action": -1
+    }
+]
+2025-04-06 15:29:36,526 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "dev", "rootcause": "The error is caused by attempting to update the 'note' column in the 'ticket' table with data that exceeds the maximum allowed length for that column. This results in a 'Data truncation' error. The error occurs in the 'TicketRepository.java' file while executing an SQL UPDATE statement to modify the 'note', 'update_count', and 'attachments' columns for a specific 'ticket_id'.", "action": -1}, {"type": "user", "rootcause": "The email content or attachments are too large to be processed. Please reduce the size of the email content or attachments and resend the email.", "action": -1}]
+2025-04-06 15:32:33,107 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-06 15:32:33,276 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-06 15:32:33,277 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-06 15:32:33,277 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-06 15:32:33,277 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "F", "processed_state": "F", "error_message": "数据库连接失败", "create_ticket": "", "ticket_id": ""}
+2025-04-06 15:32:33,277 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-06 15:32:33,278 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-06 15:32:44,492 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "dev",
+        "rootcause": "The error message indicates a database connection failure. This is likely due to a configuration issue, network problem, or database service outage. The system is unable to process the email because it cannot access the necessary database to create or update the ticket.",
+        "action": -1
+    }
+]
+2025-04-06 15:32:44,493 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "dev", "rootcause": "The error message indicates a database connection failure. This is likely due to a configuration issue, network problem, or database service outage. The system is unable to process the email because it cannot access the necessary database to create or update the ticket.", "action": -1}]
+2025-04-06 15:35:03,050 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-06 15:35:03,228 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-06 15:35:03,228 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-06 15:35:03,229 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-06 15:35:03,229 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "Y", "processed_state": "Y", "error_message": "数据库连接失败", "create_ticket": "", "ticket_id": "XM5245 update!"}
+2025-04-06 15:35:03,229 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-06 15:35:03,230 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-06 15:35:12,110 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "dev",
+        "rootcause": "The error message indicates a 'Database connection failure', which suggests that the system is unable to establish a connection to the MySQL database. This could be due to network issues, incorrect database configuration, or the database service being down. The issue needs to be investigated and resolved by a developer to ensure the system can reconnect to the database.",
+        "action": -1
+    }
+]
+2025-04-06 15:35:12,110 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "dev", "rootcause": "The error message indicates a 'Database connection failure', which suggests that the system is unable to establish a connection to the MySQL database. This could be due to network issues, incorrect database configuration, or the database service being down. The issue needs to be investigated and resolved by a developer to ensure the system can reconnect to the database.", "action": -1}]
+2025-04-06 15:35:25,801 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-06 15:35:25,987 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-06 15:35:25,988 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-06 15:35:25,988 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-06 15:35:25,988 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "Y", "processed_state": "Y", "error_message": "", "create_ticket": "", "ticket_id": "XM5245 update!"}
+2025-04-06 15:35:25,988 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-06 15:35:25,988 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-06 15:35:30,348 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "automation",
+        "rootcause": "The email was processed successfully (processed = Y and processed_state = Y), but the create_ticket field is empty, indicating that the ticket creation failed despite the email being marked as processed. This could be due to a logical error in the system where the ticket creation flag was not set correctly.",
+        "action": "error"
+    }
+]
+2025-04-06 15:35:30,349 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "automation", "rootcause": "The email was processed successfully (processed = Y and processed_state = Y), but the create_ticket field is empty, indicating that the ticket creation failed despite the email being marked as processed. This could be due to a logical error in the system where the ticket creation flag was not set correctly.", "action": "error"}]
+2025-04-06 15:37:33,710 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-06 15:37:33,884 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-06 15:37:33,884 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-06 15:37:33,884 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-06 15:37:33,884 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "Y", "processed_state": "Y", "error_message": "", "create_ticket": "", "ticket_id": "XM5245 update!"}
+2025-04-06 15:37:33,884 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-06 15:37:33,885 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-06 15:37:36,832 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "automation",
+        "rootcause": "The email was successfully processed and an update to the ticket was performed.",
+        "action": "update"
+    }
+]
+2025-04-06 15:37:36,833 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "automation", "rootcause": "The email was successfully processed and an update to the ticket was performed.", "action": "update"}]
+2025-04-06 21:00:20,930 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-06 21:00:21,116 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-06 21:00:21,116 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-06 21:00:21,116 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-06 21:00:21,116 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "F", "processed_state": "I", "error_message": "", "create_ticket": "", "ticket_id": ""}
+2025-04-06 21:00:21,116 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-06 21:00:21,116 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-06 21:00:23,934 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "automation",
+        "rootcause": "The email was determined to be ignorable based on business logic, hence it was moved to the ignore folder and marked as processed with state 'I'.",
+        "action": "ignore"
+    }
+]
+2025-04-06 21:00:23,934 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "automation", "rootcause": "The email was determined to be ignorable based on business logic, hence it was moved to the ignore folder and marked as processed with state 'I'.", "action": "ignore"}]
+2025-04-06 21:00:38,480 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-06 21:00:38,637 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-06 21:00:38,637 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-06 21:00:38,638 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-06 21:00:38,638 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "F", "processed_state": "I", "error_message": "", "create_ticket": "", "ticket_id": ""}
+2025-04-06 21:00:38,638 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-06 21:00:38,638 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-06 21:00:42,902 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "automation",
+        "rootcause": "The email was determined to be ignorable based on business logic, and thus was moved to the ignore folder without processing.",
+        "action": "ignore"
+    }
+]
+2025-04-06 21:00:42,902 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "automation", "rootcause": "The email was determined to be ignorable based on business logic, and thus was moved to the ignore folder without processing.", "action": "ignore"}]
+2025-04-06 21:00:57,074 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-06 21:00:57,246 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-06 21:00:57,246 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-06 21:00:57,246 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-06 21:00:57,246 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "F", "processed_state": "I", "error_message": "", "create_ticket": "", "ticket_id": ""}
+2025-04-06 21:00:57,247 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-06 21:00:57,247 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-06 21:01:03,850 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "automation",
+        "rootcause": "The email was determined to be ignorable based on business logic, hence it was moved to the 'ignore' folder and marked as 'F' in 'processed' and 'I' in 'processed_state'.",
+        "action": "ignore"
+    }
+]
+2025-04-06 21:01:03,851 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "automation", "rootcause": "The email was determined to be ignorable based on business logic, hence it was moved to the 'ignore' folder and marked as 'F' in 'processed' and 'I' in 'processed_state'.", "action": "ignore"}]
+2025-04-06 21:01:27,800 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-06 21:01:27,968 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-06 21:01:27,968 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-06 21:01:27,969 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-06 21:01:27,969 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "F", "processed_state": "I", "error_message": "", "create_ticket": "", "ticket_id": ""}
+2025-04-06 21:01:27,969 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-06 21:01:27,969 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-06 21:01:31,313 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "automation",
+        "rootcause": "The email was determined to be ignorable based on business logic, hence it was moved to the ignore folder and marked as processed with state 'I'.",
+        "action": "ignore"
+    }
+]
+2025-04-06 21:01:31,313 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "automation", "rootcause": "The email was determined to be ignorable based on business logic, hence it was moved to the ignore folder and marked as processed with state 'I'.", "action": "ignore"}]
+2025-04-06 21:06:40,942 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-06 21:06:41,115 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-06 21:06:41,115 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-06 21:06:41,115 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-06 21:06:41,116 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "F", "processed_state": "F", "error_message": "数据库连接失败", "create_ticket": "", "ticket_id": ""}
+2025-04-06 21:06:41,116 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-06 21:06:41,116 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-06 21:06:41,122 - EmailAnalysisAssistant - ERROR - 分析过程发生错误: "Input to ChatPromptTemplate is missing variables {'cases'}.  Expected: ['action_guidance', 'business_logic', 'cases', 'email_info'] Received: ['business_logic', 'action_guidance', 'email_info']\nNote: if you intended {cases} to be part of the string and not a variable, please escape it with double curly braces like: '{{cases}}'."
+2025-04-06 21:07:57,500 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-06 21:07:57,671 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-06 21:07:57,671 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-06 21:07:57,671 - EmailAnalysisAssistant - DEBUG - 成功加载 cases.txt
+2025-04-06 21:07:57,672 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-06 21:07:57,672 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "F", "processed_state": "F", "error_message": "数据库连接失败", "create_ticket": "", "ticket_id": ""}
+2025-04-06 21:07:57,672 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-06 21:07:57,672 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-06 21:07:57,676 - EmailAnalysisAssistant - ERROR - 分析过程发生错误: "Input to ChatPromptTemplate is missing variables {'cases'}.  Expected: ['action_guidance', 'business_logic', 'cases', 'email_info'] Received: ['business_logic', 'action_guidance', 'email_info']\nNote: if you intended {cases} to be part of the string and not a variable, please escape it with double curly braces like: '{{cases}}'."
+2025-04-06 21:09:11,072 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-06 21:09:11,242 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-06 21:09:11,243 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-06 21:09:11,243 - EmailAnalysisAssistant - DEBUG - 成功加载 cases.txt
+2025-04-06 21:09:11,243 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-06 21:09:11,243 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "F", "processed_state": "F", "error_message": "数据库连接失败", "create_ticket": "", "ticket_id": ""}
+2025-04-06 21:09:11,243 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-06 21:09:11,244 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-06 21:09:14,174 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "automation",
+        "rootcause": "Database connection failure",
+        "action": "inbox"
+    }
+]
+2025-04-06 21:09:14,174 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "automation", "rootcause": "Database connection failure", "action": "inbox"}]
+2025-04-06 21:10:39,497 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-06 21:10:39,673 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-06 21:10:39,673 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-06 21:10:39,673 - EmailAnalysisAssistant - DEBUG - 成功加载 cases.txt
+2025-04-06 21:10:39,673 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-06 21:10:39,673 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "F", "processed_state": "F", "error_message": "数据库连接失败", "create_ticket": "", "ticket_id": ""}
+2025-04-06 21:10:39,673 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-06 21:10:39,674 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-06 21:10:42,149 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "automation",
+        "rootcause": "Database connection failure",
+        "action": "inbox"
+    }
+]
+2025-04-06 21:10:42,149 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "automation", "rootcause": "Database connection failure", "action": "inbox"}]
+2025-04-06 21:11:54,128 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-06 21:11:54,292 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-06 21:11:54,292 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-06 21:11:54,292 - EmailAnalysisAssistant - DEBUG - 成功加载 cases.txt
+2025-04-06 21:11:54,292 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-06 21:11:54,293 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "F", "processed_state": "F", "error_message": "exchange service not available", "create_ticket": "", "ticket_id": ""}
+2025-04-06 21:11:54,293 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-06 21:11:54,293 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-06 21:11:58,211 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "automation",
+        "rootcause": "The error message indicates that the exchange service is not available, which suggests a network or service stability issue.",
+        "action": "inbox"
+    }
+]
+2025-04-06 21:11:58,212 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "automation", "rootcause": "The error message indicates that the exchange service is not available, which suggests a network or service stability issue.", "action": "inbox"}]
+2025-04-06 21:12:11,192 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-06 21:12:11,360 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-06 21:12:11,360 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-06 21:12:11,360 - EmailAnalysisAssistant - DEBUG - 成功加载 cases.txt
+2025-04-06 21:12:11,360 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-06 21:12:11,361 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "F", "processed_state": "F", "error_message": "exchange service not available", "create_ticket": "", "ticket_id": ""}
+2025-04-06 21:12:11,361 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-06 21:12:11,361 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-06 21:12:14,689 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "automation",
+        "rootcause": "The error message indicates that the exchange service is not available, which suggests a network or service stability issue.",
+        "action": "inbox"
+    }
+]
+2025-04-06 21:12:14,689 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "automation", "rootcause": "The error message indicates that the exchange service is not available, which suggests a network or service stability issue.", "action": "inbox"}]
+2025-04-06 22:30:39,326 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-06 22:30:39,517 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-06 22:30:39,517 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-06 22:30:39,517 - EmailAnalysisAssistant - DEBUG - 成功加载 cases.txt
+2025-04-06 22:30:39,517 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-06 22:30:39,518 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "F", "processed_state": "F", "error_message": "exchange service not available", "create_ticket": "", "ticket_id": ""}
+2025-04-06 22:30:39,518 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-06 22:30:39,518 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-06 22:30:42,033 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "automation",
+        "rootcause": "System environment issue: exchange service not available",
+        "action": "inbox"
+    }
+]
+2025-04-06 22:30:42,033 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "automation", "rootcause": "System environment issue: exchange service not available", "action": "inbox"}]
+2025-04-06 22:31:02,488 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-06 22:31:02,661 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-06 22:31:02,661 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-06 22:31:02,661 - EmailAnalysisAssistant - DEBUG - 成功加载 cases.txt
+2025-04-06 22:31:02,662 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-06 22:31:02,662 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "F", "processed_state": "F", "error_message": "exchange service not available", "create_ticket": "", "ticket_id": ""}
+2025-04-06 22:31:02,662 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-06 22:31:02,662 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-06 22:31:09,116 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "automation",
+        "rootcause": "System environment issue: exchange service not available",
+        "action": "inbox"
+    }
+]
+2025-04-06 22:31:09,116 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "automation", "rootcause": "System environment issue: exchange service not available", "action": "inbox"}]
+2025-04-06 22:31:25,590 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-06 22:31:25,757 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-06 22:31:25,757 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-06 22:31:25,757 - EmailAnalysisAssistant - DEBUG - 成功加载 cases.txt
+2025-04-06 22:31:25,757 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-06 22:31:25,758 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "F", "processed_state": "F", "error_message": "\n### Error updating database.  Cause: com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'note' at row 1\n### The error may exist in com/example/email/repository/TicketRepository.java (best guess)\n### The error may involve com.example.email.repository.TicketRepository.updateTicket-Inline\n### The error occurred while setting parameters\n### SQL: UPDATE ticket SET note = ?, update_count = ?, attachments = ? WHERE ticket_id = ?\n### Cause: com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'note' at row 1\n; Data truncation: Data too long for column 'note' at row 1; nested exception is com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'note' at row 1\n", "create_ticket": "N", "ticket_id": ""}
+2025-04-06 22:31:25,758 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-06 22:31:25,758 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-06 22:31:38,191 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "dev",
+        "rootcause": "The error is caused by attempting to update the 'note' column in the 'ticket' table with data that exceeds the column's maximum allowed length. This results in a 'Data truncation' error. The issue lies in the database schema design or the data processing logic that constructs the 'note' value.",
+        "action": "-1"
+    },
+    {
+        "type": "user",
+        "rootcause": "The system failed to update the ticket because the information being added to the ticket's 'note' field is too large. This could be due to an unusually long email body or a large number of attachments being included in a single update.",
+        "action": "-1"
+    }
+]
+2025-04-06 22:31:38,191 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "dev", "rootcause": "The error is caused by attempting to update the 'note' column in the 'ticket' table with data that exceeds the column's maximum allowed length. This results in a 'Data truncation' error. The issue lies in the database schema design or the data processing logic that constructs the 'note' value.", "action": "-1"}, {"type": "user", "rootcause": "The system failed to update the ticket because the information being added to the ticket's 'note' field is too large. This could be due to an unusually long email body or a large number of attachments being included in a single update.", "action": "-1"}]
+2025-04-06 22:32:24,103 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-06 22:32:24,270 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-06 22:32:24,270 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-06 22:32:24,270 - EmailAnalysisAssistant - DEBUG - 成功加载 cases.txt
+2025-04-06 22:32:24,271 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-06 22:32:24,271 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "F", "processed_state": "F", "error_message": "\n### Error updating database.  Cause: com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'note' at row 1\n### The error may exist in com/example/email/repository/TicketRepository.java (best guess)\n### The error may involve com.example.email.repository.TicketRepository.updateTicket-Inline\n### The error occurred while setting parameters\n### SQL: UPDATE ticket SET note = ?, update_count = ?, attachments = ? WHERE ticket_id = ?\n### Cause: com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'note' at row 1\n; Data truncation: Data too long for column 'note' at row 1; nested exception is com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'note' at row 1\n", "create_ticket": "N", "ticket_id": ""}
+2025-04-06 22:32:24,271 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-06 22:32:24,271 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-06 22:32:31,628 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "dev",
+        "rootcause": "The error is caused by attempting to update the 'note' column in the 'ticket' table with data that exceeds the column's maximum allowed length. This results in a 'Data truncation' error. The error occurred while executing the SQL UPDATE statement in the TicketRepository.java file.",
+        "action": "-1"
+    },
+    {
+        "type": "user",
+        "rootcause": "The system failed to update the ticket because the content being added to the 'note' field is too large. This issue requires a technical fix to either increase the size limit of the 'note' column or implement a mechanism to handle large content more effectively.",
+        "action": "-1"
+    }
+]
+2025-04-06 22:32:31,628 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "dev", "rootcause": "The error is caused by attempting to update the 'note' column in the 'ticket' table with data that exceeds the column's maximum allowed length. This results in a 'Data truncation' error. The error occurred while executing the SQL UPDATE statement in the TicketRepository.java file.", "action": "-1"}, {"type": "user", "rootcause": "The system failed to update the ticket because the content being added to the 'note' field is too large. This issue requires a technical fix to either increase the size limit of the 'note' column or implement a mechanism to handle large content more effectively.", "action": "-1"}]
+2025-04-06 23:14:56,969 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-06 23:14:57,145 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-06 23:14:57,145 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-06 23:14:57,145 - EmailAnalysisAssistant - DEBUG - 成功加载 cases.txt
+2025-04-06 23:14:57,146 - EmailAnalysisAssistant - INFO - 开始分析邮件: test001
+2025-04-06 23:14:57,146 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"case_id": 1, "emailId": "test001", "subject": "数据库字段溢出", "processed": "F", "processed_state": "F", "error_message": "Data truncation: Data too long for column 'note' at row 1", "create_ticket": "N", "ticket_id": ""}
+2025-04-06 23:14:57,146 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-06 23:14:57,146 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-06 23:15:05,065 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "dev",
+        "rootcause": "The error message 'Data truncation: Data too long for column 'note' at row 1' indicates that the 'note' column in the 'ticket' table is not able to accommodate the length of the data being inserted. This is likely due to the email content or attachments being too large for the current column size.",
+        "action": "-1"
+    },
+    {
+        "type": "user",
+        "rootcause": "The system is unable to process the email because the content or attachments are too large for the database column 'note'. This needs to be addressed by either reducing the size of the email content or attachments, or by increasing the size limit of the 'note' column in the database.",
+        "action": "-1"
+    }
+]
+2025-04-06 23:15:05,066 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "dev", "rootcause": "The error message 'Data truncation: Data too long for column 'note' at row 1' indicates that the 'note' column in the 'ticket' table is not able to accommodate the length of the data being inserted. This is likely due to the email content or attachments being too large for the current column size.", "action": "-1"}, {"type": "user", "rootcause": "The system is unable to process the email because the content or attachments are too large for the database column 'note'. This needs to be addressed by either reducing the size of the email content or attachments, or by increasing the size limit of the 'note' column in the database.", "action": "-1"}]
+2025-04-06 23:15:05,067 - EmailAnalysisAssistant - INFO - 开始分析邮件: test002
+2025-04-06 23:15:05,067 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"case_id": 2, "emailId": "test002", "subject": "附件过大", "processed": "F", "processed_state": "F", "error_message": "Attachment size exceeds limit (25MB)", "create_ticket": "N", "ticket_id": ""}
+2025-04-06 23:15:05,067 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-06 23:15:05,067 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-06 23:15:10,694 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "dev",
+        "rootcause": "The error message indicates that the attachment size exceeds the limit of 25MB. This is a known issue with the system's attachment handling mechanism. The system needs to be updated to handle larger attachments or the limit needs to be adjusted.",
+        "action": -1
+    },
+    {
+        "type": "user",
+        "rootcause": "The email contains an attachment that is too large for the system to process. The current limit is 25MB. Please reduce the size of the attachment and resend the email.",
+        "action": -1
+    }
+]
+2025-04-06 23:15:10,694 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "dev", "rootcause": "The error message indicates that the attachment size exceeds the limit of 25MB. This is a known issue with the system's attachment handling mechanism. The system needs to be updated to handle larger attachments or the limit needs to be adjusted.", "action": -1}, {"type": "user", "rootcause": "The email contains an attachment that is too large for the system to process. The current limit is 25MB. Please reduce the size of the attachment and resend the email.", "action": -1}]
+2025-04-06 23:15:10,695 - EmailAnalysisAssistant - INFO - 开始分析邮件: test003
+2025-04-06 23:15:10,695 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"case_id": 3, "emailId": "test003", "subject": "网络连接问题", "processed": "F", "processed_state": "F", "error_message": "Connection timeout when connecting to database", "create_ticket": "N", "ticket_id": ""}
+2025-04-06 23:15:10,695 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-06 23:15:10,696 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-06 23:15:13,061 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "automation",
+        "rootcause": "System environment issue: Connection timeout when connecting to database",
+        "action": "inbox"
+    }
+]
+2025-04-06 23:15:13,061 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "automation", "rootcause": "System environment issue: Connection timeout when connecting to database", "action": "inbox"}]
+2025-04-06 23:15:13,061 - EmailAnalysisAssistant - INFO - 开始分析邮件: test004
+2025-04-06 23:15:13,061 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"case_id": 4, "emailId": "test004", "subject": "创建成功案例", "processed": "Y", "processed_state": "Y", "error_message": "", "create_ticket": "Y", "ticket_id": "XM202403201234"}
+2025-04-06 23:15:13,062 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-06 23:15:13,062 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-06 23:15:16,931 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "automation",
+        "rootcause": "Ticket creation was successful.",
+        "action": "create"
+    }
+]
+2025-04-06 23:15:16,931 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "automation", "rootcause": "Ticket creation was successful.", "action": "create"}]
+2025-04-06 23:15:16,932 - EmailAnalysisAssistant - INFO - 开始分析邮件: test005
+2025-04-06 23:15:16,932 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"case_id": 5, "emailId": "test005", "subject": "更新成功案例", "processed": "Y", "processed_state": "Y", "error_message": "", "create_ticket": "N", "ticket_id": "XM202403201235 update!"}
+2025-04-06 23:15:16,932 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-06 23:15:16,932 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-06 23:15:19,099 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "automation",
+        "rootcause": "The email has been successfully processed for updating a ticket.",
+        "action": "update"
+    }
+]
+2025-04-06 23:15:19,099 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "automation", "rootcause": "The email has been successfully processed for updating a ticket.", "action": "update"}]
+2025-04-06 23:15:19,100 - EmailAnalysisAssistant - INFO - 开始分析邮件: test006
+2025-04-06 23:15:19,100 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"case_id": 6, "emailId": "test006", "subject": "忽略处理案例", "processed": "F", "processed_state": "I", "error_message": "", "create_ticket": "", "ticket_id": ""}
+2025-04-06 23:15:19,100 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-06 23:15:19,100 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-06 23:15:21,760 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "automation",
+        "rootcause": "The email does not require processing as indicated by processed_state = I.",
+        "action": "ignore"
+    }
+]
+2025-04-06 23:15:21,760 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "automation", "rootcause": "The email does not require processing as indicated by processed_state = I.", "action": "ignore"}]
+2025-04-06 23:15:21,764 - EmailAnalysisAssistant - INFO - 开始分析邮件: test007
+2025-04-06 23:15:21,764 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"case_id": 7, "emailId": "test007", "subject": "特殊字符问题", "processed": "F", "processed_state": "F", "error_message": "Invalid characters in email content", "create_ticket": "N", "ticket_id": ""}
+2025-04-06 23:15:21,764 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-06 23:15:21,764 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-06 23:15:37,034 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "dev",
+        "rootcause": "The email content contains invalid characters which are not supported by the system. This issue needs to be addressed by modifying the email parsing logic to handle or sanitize these special characters.",
+        "action": "-1"
+    },
+    {
+        "type": "user",
+        "rootcause": "The email contains special characters that the system cannot process. Please ensure that future emails do not include such characters to avoid processing issues.",
+        "action": "-1"
+    }
+]
+2025-04-06 23:15:37,034 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "dev", "rootcause": "The email content contains invalid characters which are not supported by the system. This issue needs to be addressed by modifying the email parsing logic to handle or sanitize these special characters.", "action": "-1"}, {"type": "user", "rootcause": "The email contains special characters that the system cannot process. Please ensure that future emails do not include such characters to avoid processing issues.", "action": "-1"}]
+2025-04-06 23:15:37,034 - EmailAnalysisAssistant - INFO - 开始分析邮件: test008
+2025-04-06 23:15:37,034 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"case_id": 8, "emailId": "test008", "subject": "邮箱服务异常", "processed": "F", "processed_state": "F", "error_message": "Exchange service temporarily unavailable", "create_ticket": "", "ticket_id": ""}
+2025-04-06 23:15:37,034 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-06 23:15:37,035 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-06 23:15:39,301 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "automation",
+        "rootcause": "System environment issue: Exchange service temporarily unavailable",
+        "action": "inbox"
+    }
+]
+2025-04-06 23:15:39,301 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "automation", "rootcause": "System environment issue: Exchange service temporarily unavailable", "action": "inbox"}]
+2025-04-06 23:15:39,302 - EmailAnalysisAssistant - INFO - 开始分析邮件: test009
+2025-04-06 23:15:39,302 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"case_id": 9, "emailId": "test009", "subject": "API调用失败", "processed": "F", "processed_state": "F", "error_message": "API request failed with status 500", "create_ticket": "N", "ticket_id": ""}
+2025-04-06 23:15:39,302 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-06 23:15:39,302 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-06 23:15:48,655 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "automation",
+        "rootcause": "API request failed with status 500, indicating a server-side issue.",
+        "action": "inbox"
+    },
+    {
+        "type": "dev",
+        "rootcause": "The error message 'API request failed with status 500' suggests that there is a server-side issue when attempting to process the API request. This could be due to internal server errors, misconfigurations, or resource limitations on the server. The development team should investigate the server logs to identify the root cause of the 500 error and implement a fix.",
+        "action": "-1"
+    },
+    {
+        "type": "user",
+        "rootcause": "The system encountered a problem while trying to process your request. This is due to an internal server error. Please try again later, and if the issue persists, contact support for assistance.",
+        "action": "-1"
+    }
+]
+2025-04-06 23:15:48,656 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "automation", "rootcause": "API request failed with status 500, indicating a server-side issue.", "action": "inbox"}, {"type": "dev", "rootcause": "The error message 'API request failed with status 500' suggests that there is a server-side issue when attempting to process the API request. This could be due to internal server errors, misconfigurations, or resource limitations on the server. The development team should investigate the server logs to identify the root cause of the 500 error and implement a fix.", "action": "-1"}, {"type": "user", "rootcause": "The system encountered a problem while trying to process your request. This is due to an internal server error. Please try again later, and if the issue persists, contact support for assistance.", "action": "-1"}]
+2025-04-06 23:15:48,657 - EmailAnalysisAssistant - INFO - 开始分析邮件: test010
+2025-04-06 23:15:48,657 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"case_id": 10, "emailId": "test010", "subject": "数据库连接池满", "processed": "F", "processed_state": "F", "error_message": "Maximum pool size has been reached", "create_ticket": "", "ticket_id": ""}
+2025-04-06 23:15:48,657 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-06 23:15:48,657 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-06 23:16:04,119 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "automation",
+        "rootcause": "System environment issue: Maximum pool size has been reached",
+        "action": "inbox"
+    },
+    {
+        "type": "dev",
+        "rootcause": "The error indicates that the database connection pool has reached its maximum size, preventing new connections. This could be due to high traffic or inefficient connection management. \n\n- Error Location: Database connection pool.\n- Specific Reason: Maximum pool size limit reached.\n- Fix Suggestion: Increase the maximum pool size configuration or optimize connection usage to release idle connections.\n- Technical Details: Review the database connection pool settings and implement a connection pooling strategy that handles peak loads more effectively.",
+        "action": "-1"
+    },
+    {
+        "type": "user",
+        "rootcause": "The system is unable to process the email because the database connection pool is full. This means the system cannot create new connections to the database to handle the email.\n\n- Problem Description: The database connection pool is at maximum capacity.\n- Specific Fix Suggestion: Contact the development team to adjust the database connection pool settings or optimize how connections are used.\n- Next Steps: The development team will need to review and adjust the database connection pool configuration to ensure it can handle the current load.",
+        "action": "-1"
+    }
+]
+2025-04-06 23:16:04,119 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "automation", "rootcause": "System environment issue: Maximum pool size has been reached", "action": "inbox"}, {"type": "dev", "rootcause": "The error indicates that the database connection pool has reached its maximum size, preventing new connections. This could be due to high traffic or inefficient connection management. \n\n- Error Location: Database connection pool.\n- Specific Reason: Maximum pool size limit reached.\n- Fix Suggestion: Increase the maximum pool size configuration or optimize connection usage to release idle connections.\n- Technical Details: Review the database connection pool settings and implement a connection pooling strategy that handles peak loads more effectively.", "action": "-1"}, {"type": "user", "rootcause": "The system is unable to process the email because the database connection pool is full. This means the system cannot create new connections to the database to handle the email.\n\n- Problem Description: The database connection pool is at maximum capacity.\n- Specific Fix Suggestion: Contact the development team to adjust the database connection pool settings or optimize how connections are used.\n- Next Steps: The development team will need to review and adjust the database connection pool configuration to ensure it can handle the current load.", "action": "-1"}]
+2025-04-06 23:16:04,120 - EmailAnalysisAssistant - INFO - 开始分析邮件: test011
+2025-04-06 23:16:04,120 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"case_id": 11, "emailId": "test011", "subject": "附件格式错误", "processed": "F", "processed_state": "F", "error_message": "Unsupported attachment format", "create_ticket": "N", "ticket_id": ""}
+2025-04-06 23:16:04,120 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-06 23:16:04,121 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-06 23:16:13,468 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "dev",
+        "rootcause": "The error message 'Unsupported attachment format' indicates that the system encountered an issue with the format of the attachment in the email. This could be due to an unsupported file type or a corrupted file. The system needs to be updated to handle a broader range of attachment formats or to validate attachments before processing.",
+        "action": "-1"
+    },
+    {
+        "type": "user",
+        "rootcause": "The email could not be processed because the attachment format is not supported. Please ensure that all attachments are in a supported format before sending the email.",
+        "action": "-1"
+    }
+]
+2025-04-06 23:16:13,468 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "dev", "rootcause": "The error message 'Unsupported attachment format' indicates that the system encountered an issue with the format of the attachment in the email. This could be due to an unsupported file type or a corrupted file. The system needs to be updated to handle a broader range of attachment formats or to validate attachments before processing.", "action": "-1"}, {"type": "user", "rootcause": "The email could not be processed because the attachment format is not supported. Please ensure that all attachments are in a supported format before sending the email.", "action": "-1"}]
+2025-04-06 23:16:13,469 - EmailAnalysisAssistant - INFO - 开始分析邮件: test012
+2025-04-06 23:16:13,469 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"case_id": 12, "emailId": "test012", "subject": "邮件内容为空", "processed": "F", "processed_state": "F", "error_message": "Email body is empty", "create_ticket": "N", "ticket_id": ""}
+2025-04-06 23:16:13,469 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-06 23:16:13,469 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-06 23:16:20,355 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "dev",
+        "rootcause": "The email body is empty, which indicates that the email content is missing or not properly received. This could be due to issues with the email service provider or the way the email is being parsed. The system expects a non-empty email body to process the email and create or update a ticket.",
+        "action": "-1"
+    },
+    {
+        "type": "user",
+        "rootcause": "The email content is empty, which means the system cannot process the email to create or update a ticket. Please ensure that the email contains the necessary information and is properly formatted before sending it.",
+        "action": "-1"
+    }
+]
+2025-04-06 23:16:20,355 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "dev", "rootcause": "The email body is empty, which indicates that the email content is missing or not properly received. This could be due to issues with the email service provider or the way the email is being parsed. The system expects a non-empty email body to process the email and create or update a ticket.", "action": "-1"}, {"type": "user", "rootcause": "The email content is empty, which means the system cannot process the email to create or update a ticket. Please ensure that the email contains the necessary information and is properly formatted before sending it.", "action": "-1"}]
+2025-04-06 23:16:20,356 - EmailAnalysisAssistant - INFO - 开始分析邮件: test013
+2025-04-06 23:16:20,356 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"case_id": 13, "emailId": "test013", "subject": "重复处理", "processed": "F", "processed_state": "F", "error_message": "Duplicate ticket ID detected", "create_ticket": "N", "ticket_id": ""}
+2025-04-06 23:16:20,356 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-06 23:16:20,356 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-06 23:16:26,995 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "dev",
+        "rootcause": "Duplicate ticket ID detected. This indicates that the system attempted to create a new ticket with an ID that already exists in the database. This could be due to a race condition or a bug in the ticket creation logic.",
+        "action": "-1"
+    },
+    {
+        "type": "user",
+        "rootcause": "The system detected a duplicate ticket ID, which means an attempt was made to create a new ticket with an ID that already exists. This issue needs to be resolved by the development team to prevent future occurrences.",
+        "action": "-1"
+    }
+]
+2025-04-06 23:16:26,996 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "dev", "rootcause": "Duplicate ticket ID detected. This indicates that the system attempted to create a new ticket with an ID that already exists in the database. This could be due to a race condition or a bug in the ticket creation logic.", "action": "-1"}, {"type": "user", "rootcause": "The system detected a duplicate ticket ID, which means an attempt was made to create a new ticket with an ID that already exists. This issue needs to be resolved by the development team to prevent future occurrences.", "action": "-1"}]
+2025-04-06 23:16:26,996 - EmailAnalysisAssistant - INFO - 开始分析邮件: test014
+2025-04-06 23:16:26,996 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"case_id": 14, "emailId": "test014", "subject": "权限验证失败", "processed": "F", "processed_state": "F", "error_message": "Authentication failed for API access", "create_ticket": "", "ticket_id": ""}
+2025-04-06 23:16:26,996 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-06 23:16:26,997 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-06 23:16:35,763 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "dev",
+        "rootcause": "Authentication failed for API access. This indicates a problem with the API access credentials or the API service itself. The system is unable to authenticate and proceed with ticket creation or update due to this issue.",
+        "action": "-1"
+    },
+    {
+        "type": "user",
+        "rootcause": "The system is unable to authenticate with the API service, which is preventing the creation or update of tickets. This could be due to incorrect credentials or an issue with the API service.",
+        "action": "-1"
+    }
+]
+2025-04-06 23:16:35,763 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "dev", "rootcause": "Authentication failed for API access. This indicates a problem with the API access credentials or the API service itself. The system is unable to authenticate and proceed with ticket creation or update due to this issue.", "action": "-1"}, {"type": "user", "rootcause": "The system is unable to authenticate with the API service, which is preventing the creation or update of tickets. This could be due to incorrect credentials or an issue with the API service.", "action": "-1"}]
+2025-04-06 23:16:35,764 - EmailAnalysisAssistant - INFO - 开始分析邮件: test015
+2025-04-06 23:16:35,764 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"case_id": 15, "emailId": "test015", "subject": "系统资源不足", "processed": "F", "processed_state": "F", "error_message": "System resources exhausted", "create_ticket": "", "ticket_id": ""}
+2025-04-06 23:16:35,764 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-06 23:16:35,764 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-06 23:16:37,851 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "automation",
+        "rootcause": "System resources exhausted",
+        "action": "inbox"
+    }
+]
+2025-04-06 23:16:37,851 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "automation", "rootcause": "System resources exhausted", "action": "inbox"}]
+2025-04-06 23:23:25,967 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-06 23:23:26,145 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-06 23:23:26,146 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-06 23:23:26,146 - EmailAnalysisAssistant - DEBUG - 成功加载 cases.txt
+2025-04-06 23:23:26,146 - EmailAnalysisAssistant - INFO - 开始分析邮件: test001
+2025-04-06 23:23:26,146 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"case_id": 1, "emailId": "test001", "subject": "数据库字段溢出", "processed": "F", "processed_state": "F", "error_message": "Data truncation: Data too long for column 'note' at row 1", "create_ticket": "N", "ticket_id": ""}
+2025-04-06 23:23:26,146 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-06 23:23:26,146 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-06 23:23:34,856 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "dev",
+        "rootcause": "The error message 'Data truncation: Data too long for column 'note' at row 1' indicates that the 'note' column in the 'ticket' table is not able to accommodate the length of the data being inserted. This is likely due to the email content or attachments being too large for the current column size.",
+        "action": "-1"
+    },
+    {
+        "type": "user",
+        "rootcause": "The system is unable to process the email because the content or attachments are too large for the database column 'note'. This needs to be addressed by either reducing the size of the content or attachments, or by increasing the size limit of the 'note' column in the database.",
+        "action": "-1"
+    }
+]
+2025-04-06 23:23:34,856 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "dev", "rootcause": "The error message 'Data truncation: Data too long for column 'note' at row 1' indicates that the 'note' column in the 'ticket' table is not able to accommodate the length of the data being inserted. This is likely due to the email content or attachments being too large for the current column size.", "action": "-1"}, {"type": "user", "rootcause": "The system is unable to process the email because the content or attachments are too large for the database column 'note'. This needs to be addressed by either reducing the size of the content or attachments, or by increasing the size limit of the 'note' column in the database.", "action": "-1"}]
+2025-04-06 23:23:34,856 - EmailAnalysisAssistant - INFO - 开始分析邮件: test002
+2025-04-06 23:23:34,856 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"case_id": 2, "emailId": "test002", "subject": "附件过大", "processed": "F", "processed_state": "F", "error_message": "Attachment size exceeds limit (25MB)", "create_ticket": "N", "ticket_id": ""}
+2025-04-06 23:23:34,856 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-06 23:23:34,857 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-06 23:23:40,979 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "dev",
+        "rootcause": "The error message indicates that the attachment size exceeds the system's limit of 25MB. This is a technical issue related to the attachment handling mechanism in the email processing system.",
+        "action": "-1"
+    },
+    {
+        "type": "user",
+        "rootcause": "The email contains an attachment that is too large for the system to process. The current limit is 25MB.",
+        "action": "-1"
+    }
+]
+2025-04-06 23:23:40,979 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "dev", "rootcause": "The error message indicates that the attachment size exceeds the system's limit of 25MB. This is a technical issue related to the attachment handling mechanism in the email processing system.", "action": "-1"}, {"type": "user", "rootcause": "The email contains an attachment that is too large for the system to process. The current limit is 25MB.", "action": "-1"}]
+2025-04-06 23:23:40,979 - EmailAnalysisAssistant - INFO - 开始分析邮件: test003
+2025-04-06 23:23:40,979 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"case_id": 3, "emailId": "test003", "subject": "网络连接问题", "processed": "F", "processed_state": "F", "error_message": "Connection timeout when connecting to database", "create_ticket": "N", "ticket_id": ""}
+2025-04-06 23:23:40,979 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-06 23:23:40,980 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-06 23:23:44,473 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "automation",
+        "rootcause": "System environment issue: Connection timeout when connecting to database",
+        "action": "inbox"
+    }
+]
+2025-04-06 23:23:44,473 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "automation", "rootcause": "System environment issue: Connection timeout when connecting to database", "action": "inbox"}]
+2025-04-06 23:23:44,473 - EmailAnalysisAssistant - INFO - 开始分析邮件: test004
+2025-04-06 23:23:44,474 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"case_id": 4, "emailId": "test004", "subject": "创建成功案例", "processed": "Y", "processed_state": "Y", "error_message": "", "create_ticket": "Y", "ticket_id": "XM202403201234"}
+2025-04-06 23:23:44,474 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-06 23:23:44,474 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-06 23:23:47,462 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "automation",
+        "rootcause": "Ticket creation was successful.",
+        "action": "create"
+    }
+]
+2025-04-06 23:23:47,463 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "automation", "rootcause": "Ticket creation was successful.", "action": "create"}]
+2025-04-06 23:23:47,463 - EmailAnalysisAssistant - INFO - 开始分析邮件: test005
+2025-04-06 23:23:47,463 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"case_id": 5, "emailId": "test005", "subject": "更新成功案例", "processed": "Y", "processed_state": "Y", "error_message": "", "create_ticket": "N", "ticket_id": "XM202403201235 update!"}
+2025-04-06 23:23:47,463 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-06 23:23:47,463 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-06 23:23:49,951 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "automation",
+        "rootcause": "Ticket update successful.",
+        "action": "update"
+    }
+]
+2025-04-06 23:23:49,951 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "automation", "rootcause": "Ticket update successful.", "action": "update"}]
+2025-04-06 23:23:49,951 - EmailAnalysisAssistant - INFO - 开始分析邮件: test006
+2025-04-06 23:23:49,952 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"case_id": 6, "emailId": "test006", "subject": "忽略处理案例", "processed": "F", "processed_state": "I", "error_message": "", "create_ticket": "", "ticket_id": ""}
+2025-04-06 23:23:49,952 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-06 23:23:49,952 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-06 23:23:52,077 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "automation",
+        "rootcause": "The email does not require processing as per business logic.",
+        "action": "ignore"
+    }
+]
+2025-04-06 23:23:52,077 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "automation", "rootcause": "The email does not require processing as per business logic.", "action": "ignore"}]
+2025-04-06 23:23:52,077 - EmailAnalysisAssistant - INFO - 开始分析邮件: test007
+2025-04-06 23:23:52,078 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"case_id": 7, "emailId": "test007", "subject": "特殊字符问题", "processed": "F", "processed_state": "F", "error_message": "Invalid characters in email content", "create_ticket": "N", "ticket_id": ""}
+2025-04-06 23:23:52,078 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-06 23:23:52,078 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-06 23:23:59,809 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "dev",
+        "rootcause": "The email content contains invalid characters which are not supported by the system. This issue needs to be addressed by modifying the email parsing logic to handle or sanitize these special characters.",
+        "action": "-1"
+    },
+    {
+        "type": "user",
+        "rootcause": "The email contains special characters that the system cannot process. Please ensure that future emails do not include such characters to avoid processing issues.",
+        "action": "-1"
+    }
+]
+2025-04-06 23:23:59,809 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "dev", "rootcause": "The email content contains invalid characters which are not supported by the system. This issue needs to be addressed by modifying the email parsing logic to handle or sanitize these special characters.", "action": "-1"}, {"type": "user", "rootcause": "The email contains special characters that the system cannot process. Please ensure that future emails do not include such characters to avoid processing issues.", "action": "-1"}]
+2025-04-06 23:23:59,809 - EmailAnalysisAssistant - INFO - 开始分析邮件: test008
+2025-04-06 23:23:59,809 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"case_id": 8, "emailId": "test008", "subject": "邮箱服务异常", "processed": "F", "processed_state": "F", "error_message": "Exchange service temporarily unavailable", "create_ticket": "", "ticket_id": ""}
+2025-04-06 23:23:59,810 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-06 23:23:59,810 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-06 23:24:02,344 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "automation",
+        "rootcause": "System environment issue: Exchange service temporarily unavailable",
+        "action": "inbox"
+    }
+]
+2025-04-06 23:24:02,344 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "automation", "rootcause": "System environment issue: Exchange service temporarily unavailable", "action": "inbox"}]
+2025-04-06 23:24:02,344 - EmailAnalysisAssistant - INFO - 开始分析邮件: test009
+2025-04-06 23:24:02,345 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"case_id": 9, "emailId": "test009", "subject": "API调用失败", "processed": "F", "processed_state": "F", "error_message": "API request failed with status 500", "create_ticket": "N", "ticket_id": ""}
+2025-04-06 23:24:02,345 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-06 23:24:02,345 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-06 23:24:27,830 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-06 23:24:28,006 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-06 23:24:28,006 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-06 23:24:28,006 - EmailAnalysisAssistant - DEBUG - 成功加载 cases.txt
+2025-04-06 23:24:28,007 - EmailAnalysisAssistant - INFO - 开始分析邮件: test001
+2025-04-06 23:24:28,007 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"case_id": 1, "emailId": "test001", "subject": "数据库字段溢出", "processed": "F", "processed_state": "F", "error_message": "Data truncation: Data too long for column 'note' at row 1", "create_ticket": "N", "ticket_id": ""}
+2025-04-06 23:24:28,007 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-06 23:24:28,007 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-06 23:24:36,523 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "dev",
+        "rootcause": "The error message 'Data truncation: Data too long for column 'note' at row 1' indicates that the 'note' column in the 'ticket' table is not able to accommodate the length of the data being inserted. This is likely due to the email content or attachments being too large for the current column size.",
+        "action": "-1"
+    },
+    {
+        "type": "user",
+        "rootcause": "The system is unable to process the email because the content or attachments are too large for the database column 'note'. This needs to be addressed by either reducing the size of the email content or attachments, or by increasing the size limit of the 'note' column in the database.",
+        "action": "-1"
+    }
+]
+2025-04-06 23:24:36,523 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "dev", "rootcause": "The error message 'Data truncation: Data too long for column 'note' at row 1' indicates that the 'note' column in the 'ticket' table is not able to accommodate the length of the data being inserted. This is likely due to the email content or attachments being too large for the current column size.", "action": "-1"}, {"type": "user", "rootcause": "The system is unable to process the email because the content or attachments are too large for the database column 'note'. This needs to be addressed by either reducing the size of the email content or attachments, or by increasing the size limit of the 'note' column in the database.", "action": "-1"}]
+2025-04-06 23:24:36,524 - EmailAnalysisAssistant - INFO - 开始分析邮件: test004
+2025-04-06 23:24:36,524 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"case_id": 4, "emailId": "test004", "subject": "创建成功案例", "processed": "Y", "processed_state": "Y", "error_message": "", "create_ticket": "Y", "ticket_id": "XM202403201234"}
+2025-04-06 23:24:36,524 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-06 23:24:36,524 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-06 23:24:38,388 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "automation",
+        "rootcause": "Ticket creation was successful.",
+        "action": "create"
+    }
+]
+2025-04-06 23:24:38,388 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "automation", "rootcause": "Ticket creation was successful.", "action": "create"}]
+2025-04-06 23:24:38,389 - EmailAnalysisAssistant - INFO - 开始分析邮件: test015
+2025-04-06 23:24:38,389 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"case_id": 15, "emailId": "test015", "subject": "系统资源不足", "processed": "F", "processed_state": "F", "error_message": "System resources exhausted", "create_ticket": "", "ticket_id": ""}
+2025-04-06 23:24:38,389 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-06 23:24:38,389 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-06 23:24:40,458 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "automation",
+        "rootcause": "System resources exhausted",
+        "action": "inbox"
+    }
+]
+2025-04-06 23:24:40,458 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "automation", "rootcause": "System resources exhausted", "action": "inbox"}]
+2025-04-06 23:24:47,170 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-06 23:24:47,347 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-06 23:24:47,347 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-06 23:24:47,347 - EmailAnalysisAssistant - DEBUG - 成功加载 cases.txt
+2025-04-06 23:24:47,348 - EmailAnalysisAssistant - INFO - 开始分析邮件: test001
+2025-04-06 23:24:47,348 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"case_id": 1, "emailId": "test001", "subject": "数据库字段溢出", "processed": "F", "processed_state": "F", "error_message": "Data truncation: Data too long for column 'note' at row 1", "create_ticket": "N", "ticket_id": ""}
+2025-04-06 23:24:47,348 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-06 23:24:47,348 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-06 23:24:56,431 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "dev",
+        "rootcause": "The error message 'Data truncation: Data too long for column 'note' at row 1' indicates that the 'note' column in the ticket table is not able to accommodate the length of the data being inserted. This is likely due to the email body or attachments being too large for the current column size.",
+        "action": "-1"
+    },
+    {
+        "type": "user",
+        "rootcause": "The system is unable to process the email because the content is too large for the database field that stores the email body and attachments. This needs to be fixed by either reducing the size of the content being sent or by increasing the size of the database field.",
+        "action": "-1"
+    }
+]
+2025-04-06 23:24:56,431 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "dev", "rootcause": "The error message 'Data truncation: Data too long for column 'note' at row 1' indicates that the 'note' column in the ticket table is not able to accommodate the length of the data being inserted. This is likely due to the email body or attachments being too large for the current column size.", "action": "-1"}, {"type": "user", "rootcause": "The system is unable to process the email because the content is too large for the database field that stores the email body and attachments. This needs to be fixed by either reducing the size of the content being sent or by increasing the size of the database field.", "action": "-1"}]
+2025-04-06 23:24:56,432 - EmailAnalysisAssistant - INFO - 开始分析邮件: test004
+2025-04-06 23:24:56,432 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"case_id": 4, "emailId": "test004", "subject": "创建成功案例", "processed": "Y", "processed_state": "Y", "error_message": "", "create_ticket": "Y", "ticket_id": "XM202403201234"}
+2025-04-06 23:24:56,432 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-06 23:24:56,432 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-06 23:24:58,433 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "automation",
+        "rootcause": "Ticket creation was successful.",
+        "action": "create"
+    }
+]
+2025-04-06 23:24:58,433 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "automation", "rootcause": "Ticket creation was successful.", "action": "create"}]
+2025-04-06 23:24:58,433 - EmailAnalysisAssistant - INFO - 开始分析邮件: test015
+2025-04-06 23:24:58,434 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"case_id": 15, "emailId": "test015", "subject": "系统资源不足", "processed": "F", "processed_state": "F", "error_message": "System resources exhausted", "create_ticket": "", "ticket_id": ""}
+2025-04-06 23:24:58,434 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-06 23:24:58,434 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-06 23:25:00,339 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "automation",
+        "rootcause": "System resources exhausted",
+        "action": "inbox"
+    }
+]
+2025-04-06 23:25:00,339 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "automation", "rootcause": "System resources exhausted", "action": "inbox"}]
+2025-04-06 23:25:12,243 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-06 23:25:12,430 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-06 23:25:12,430 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-06 23:25:12,430 - EmailAnalysisAssistant - DEBUG - 成功加载 cases.txt
+2025-04-06 23:25:12,431 - EmailAnalysisAssistant - INFO - 开始分析邮件: test001
+2025-04-06 23:25:12,431 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"case_id": 1, "emailId": "test001", "subject": "数据库字段溢出", "processed": "F", "processed_state": "F", "error_message": "Data truncation: Data too long for column 'note' at row 1", "create_ticket": "N", "ticket_id": ""}
+2025-04-06 23:25:12,431 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-06 23:25:12,431 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-06 23:25:20,586 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "dev",
+        "rootcause": "The error message 'Data truncation: Data too long for column 'note' at row 1' indicates that the 'note' column in the 'ticket' table is not able to accommodate the length of the data being inserted. This is likely due to the email content or attachments being too large for the current column size.",
+        "action": "-1"
+    },
+    {
+        "type": "user",
+        "rootcause": "The system is unable to process the email because the content or attachments are too large for the database column 'note'. This needs to be addressed by either reducing the size of the content or attachments, or by increasing the size limit of the 'note' column in the database.",
+        "action": "-1"
+    }
+]
+2025-04-06 23:25:20,586 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "dev", "rootcause": "The error message 'Data truncation: Data too long for column 'note' at row 1' indicates that the 'note' column in the 'ticket' table is not able to accommodate the length of the data being inserted. This is likely due to the email content or attachments being too large for the current column size.", "action": "-1"}, {"type": "user", "rootcause": "The system is unable to process the email because the content or attachments are too large for the database column 'note'. This needs to be addressed by either reducing the size of the content or attachments, or by increasing the size limit of the 'note' column in the database.", "action": "-1"}]
+2025-04-06 23:25:20,588 - EmailAnalysisAssistant - INFO - 开始分析邮件: test004
+2025-04-06 23:25:20,588 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"case_id": 4, "emailId": "test004", "subject": "创建成功案例", "processed": "Y", "processed_state": "Y", "error_message": "", "create_ticket": "Y", "ticket_id": "XM202403201234"}
+2025-04-06 23:25:20,588 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-06 23:25:20,588 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-06 23:25:22,298 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "automation",
+        "rootcause": "Ticket creation was successful.",
+        "action": "create"
+    }
+]
+2025-04-06 23:25:22,298 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "automation", "rootcause": "Ticket creation was successful.", "action": "create"}]
+2025-04-06 23:25:22,298 - EmailAnalysisAssistant - INFO - 开始分析邮件: test015
+2025-04-06 23:25:22,298 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"case_id": 15, "emailId": "test015", "subject": "系统资源不足", "processed": "F", "processed_state": "F", "error_message": "System resources exhausted", "create_ticket": "", "ticket_id": ""}
+2025-04-06 23:25:22,298 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-06 23:25:22,299 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-06 23:25:24,343 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "automation",
+        "rootcause": "System resources exhausted",
+        "action": "inbox"
+    }
+]
+2025-04-06 23:25:24,343 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "automation", "rootcause": "System resources exhausted", "action": "inbox"}]
+2025-04-06 23:27:53,737 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-06 23:27:53,927 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-06 23:27:53,927 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-06 23:27:53,927 - EmailAnalysisAssistant - DEBUG - 成功加载 cases.txt
+2025-04-06 23:27:53,928 - EmailAnalysisAssistant - INFO - 开始分析邮件: test001
+2025-04-06 23:27:53,928 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"case_id": 1, "emailId": "test001", "subject": "数据库字段溢出", "processed": "F", "processed_state": "F", "error_message": "Data truncation: Data too long for column 'note' at row 1", "create_ticket": "N", "ticket_id": ""}
+2025-04-06 23:27:53,928 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-06 23:27:53,929 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-06 23:28:03,860 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "dev",
+        "rootcause": "The error message 'Data truncation: Data too long for column 'note' at row 1' indicates that the 'note' column in the 'ticket' table is not large enough to accommodate the data being inserted. This is a database schema issue where the column size needs to be increased to handle larger data entries.",
+        "action": "-1"
+    },
+    {
+        "type": "user",
+        "rootcause": "The system encountered an error while processing the email because the information in the email is too large for the database field that stores it. This needs to be fixed by adjusting the database settings to allow for larger data entries.",
+        "action": "-1"
+    }
+]
+2025-04-06 23:28:03,860 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "dev", "rootcause": "The error message 'Data truncation: Data too long for column 'note' at row 1' indicates that the 'note' column in the 'ticket' table is not large enough to accommodate the data being inserted. This is a database schema issue where the column size needs to be increased to handle larger data entries.", "action": "-1"}, {"type": "user", "rootcause": "The system encountered an error while processing the email because the information in the email is too large for the database field that stores it. This needs to be fixed by adjusting the database settings to allow for larger data entries.", "action": "-1"}]
+2025-04-06 23:28:03,861 - EmailAnalysisAssistant - INFO - 开始分析邮件: test004
+2025-04-06 23:28:03,861 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"case_id": 4, "emailId": "test004", "subject": "创建成功案例", "processed": "Y", "processed_state": "Y", "error_message": "", "create_ticket": "Y", "ticket_id": "XM202403201234"}
+2025-04-06 23:28:03,861 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-06 23:28:03,861 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-06 23:28:06,193 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "automation",
+        "rootcause": "Ticket creation was successful.",
+        "action": "create"
+    }
+]
+2025-04-06 23:28:06,193 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "automation", "rootcause": "Ticket creation was successful.", "action": "create"}]
+2025-04-06 23:28:06,193 - EmailAnalysisAssistant - INFO - 开始分析邮件: test015
+2025-04-06 23:28:06,193 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"case_id": 15, "emailId": "test015", "subject": "系统资源不足", "processed": "F", "processed_state": "F", "error_message": "System resources exhausted", "create_ticket": "", "ticket_id": ""}
+2025-04-06 23:28:06,193 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-06 23:28:06,194 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-06 23:28:15,861 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "automation",
+        "rootcause": "System environment issue: system resources exhausted",
+        "action": "inbox"
+    },
+    {
+        "type": "dev",
+        "rootcause": "The system is experiencing resource exhaustion, which could be due to high memory or CPU usage. This prevents the email processing system from functioning correctly.",
+        "action": "-1"
+    },
+    {
+        "type": "user",
+        "rootcause": "The system is running out of resources, which is causing the email processing to fail. This needs to be addressed to ensure smooth operation.",
+        "action": "-1"
+    }
+]
+2025-04-06 23:28:15,862 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "automation", "rootcause": "System environment issue: system resources exhausted", "action": "inbox"}, {"type": "dev", "rootcause": "The system is experiencing resource exhaustion, which could be due to high memory or CPU usage. This prevents the email processing system from functioning correctly.", "action": "-1"}, {"type": "user", "rootcause": "The system is running out of resources, which is causing the email processing to fail. This needs to be addressed to ensure smooth operation.", "action": "-1"}]

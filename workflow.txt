@@ -1,0 +1,74 @@
+请帮我构建流程图：
+
+第一部分：通过邮件创建ticket的系统。
+涉及到的mysql表格如下：
+email：
+CREATE TABLE email (
+    id INT AUTO_INCREMENT PRIMARY KEY,                -- 主键
+    emailId VARCHAR(255) NOT NULL,                    -- 网易邮箱每个邮件的唯一ID
+    subject VARCHAR(255),                             -- 邮件主题
+    sender VARCHAR(255),                              -- 发送者的邮箱
+    receiver VARCHAR(255),                                  -- 接收者的邮箱
+    emailBody TEXT,                                   -- 邮件正文内容 和 附件的名字
+    receiveTime DATETIME,                             -- 邮件接收时间
+    processed VARCHAR(255),                           -- 处理状态描述
+    processed_state VARCHAR(255),                     -- 处理状态（例如：成功、失败等）
+    error_message VARCHAR(5000),                      -- 错误信息
+    create_ticket VARCHAR(255),                       -- 是否创建工单（例如：是/否）
+    ticket_id VARCHAR(255),                           -- 工单ID（如果创建了工单）
+    update_time DATETIME DEFAULT CURRENT_TIMESTAMP    -- 更新时间
+    ON UPDATE CURRENT_TIMESTAMP                       -- 自动更新时间戳
+);
+ticket：
+CREATE TABLE ticket (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    ticketid VARCHAR(255) NOT NULL,
+    subject VARCHAR(500) NOT NULL,
+    note longtext,  -- 记录更新的内容，每一次将对应的邮件内容body 和附件名字 记录在这个字段（原来的数据不删除）。每次更新加个标题 update：[邮件内容]。
+    update_count INT DEFAULT 0,  --被更新的次数，第一次创建ticket，此时这个字段置为1
+    updatetime DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP，
+    attachments  --记录跟这个ticket关联的附件id，逗号分隔
+);
+
+涉及到的网易邮箱基本文件夹：
+inbox：这个是网易邮箱默认收件箱
+working：要被解析的邮件
+ignore：该邮件不需要下一步解析，直接从working移动到 ignore
+create：根据判断逻辑，该邮件要对应创建一个ticket，创建之后邮件 移动到 create
+update： 根据判断逻辑，该邮件要对应更新一个ticket，更新之后邮件 移动到 update
+error：整个程序运行过程中出现问题，则将该邮件移动到error。
+
+基本业务逻辑：
+有一个emailservice读取邮件并根据相关逻辑创建或者更新ticket的功能，之后再将邮件移动到相应的文件夹。
+
+具体业务逻辑：
+1. emailservice是定时任务，每隔1分钟读取inbox的邮件，处理每一个邮件，每个邮件会根据判断逻辑，进行相关的数据库操作以及邮件移动位置的操作。
+2. 定时任务细节：
+    2.1 首先遍历inbox里面的邮件。将个邮件的基本信息保存在email表里面（emailId：这个是网易邮箱每个邮件的唯一id；subject；sender：发送者的邮箱；receiver：接收者的邮箱
+    meailBody：邮件的body内容和附件的名字；receiveTime：邮件接收时间），再将该邮件移动到working folder里面（代表邮件处于解析过程）
+    2.2 上面的任务完成，实现邮件基本信息存储，和邮件的移动。接下来就是对working里面的每一个邮件进行解析操作。会根据既定的[逻辑判断-具体内容在标题3]邮件是触发 create ticket还是update ticket 还是ignore不做任何操作。
+3.判断逻辑：
+   3.1 如果邮件主题包含“ignore”，更新email表记录字段：processed 为 F，processed_state为 I  ；然后邮件直接移动到ignore folder
+   3.2 判断是create还是update ticket
+         3.2.1 创建：获取该邮件subject，在ticket表查看该主题是否创建过ticket，如果没有则创建ticket，同时提取存储附件，并进行数据库ticket字段记录，attachment映射表记录。更新email表该邮件记录的其他字段，processed为Y， processed_state为Y，create_ticket为Y，ticket_id：填充上面生成的ticketid。
+         3.2.2 更新：获取该邮件subject，在ticket表查看该主题是否创建过ticket，如果有则更新ticket，同时提取存储附件，并进行数据库ticket字段记录，attachment映射表记录。。找到该主题对应的ticket，添加该邮件的body和附件名字到note里面（原来的note保留），更新次数加1。
+                  更新email表该邮件记录的其他字段，processed为Y， processed_state为Y，create_ticket为N，ticket_id：填充对应的ticketid后面加上“ update！”（例如 XM202503171535 update！）。
+4.异常错误：这上面所有的过程，如果出现exception，则将当前处理的邮件对应的email表的记录更新，processed为F，processed_state为F, error_message保存错误具体信息。
+
+
+第二部分：【监控邮件处理失败】的系统（监控上面系统的处理邮件失败的case）。主要有两个小部分。
+2.1：大模型辅助分析决策系统（LLMHelper.py）
+这个LLMHelper.py文件基本实现了向大语言模型问答的功能，配置了apikey和apibase，可以获得响应，保持这个方法，但已有的问答系统不满足我的功能，你需要修改代码。你需要完成我的新需求，编写功能接口，后续我的第二部分会调用这些功能。
+具体要求：
+我已经编写了 （1）邮件处理相关的业务逻辑（business.txt），和 （2）发现邮件处理失败后系统需要分析并作出决策的指导文件（actionGuidance.txt）。你给大语言模型设定提示词要将这两个文件作为基本知识输入。
+大语言辅助分析模型需要接收1个参数 email的具体信息（这个来源于DBService.py的def get_email_detail(self, email_id)方法），是一个json数据。
+你的提示词，需要将business.txt， actionGuidance.txt作为基本知识，然后email的具体信息是问题邮件的具体信息，需要根据actionGuidance.txt的指导 模型给出规定格式的响应（结果以json格式为元素的list）
+
+
+2.2邮件监控系统，这是主程序（Main.py）
+该系统是这个定时任务，每个2分钟通过emailService.py的 def get_messages_from_folder(self, folder_name: str)去获取"working" folder里面的邮件，记录下这些邮件。下一次定时任务获取继续获取"working" 和 “error” folder里面的邮件，
+如果上一次获取到的邮件在这一次依然出现（通过get_email_info返回值message_id来确认是否是同一份邮件），则这些重复出现的邮件就是”处理失败“的问题邮件（剩下的这些邮件保存，用来和下一次定时任务获取到的邮件进行比较，后面以此类推），
+我们需要遍历这每一个问题邮件，将这些邮件的具体信息（这个来源于DBService.py的def get_email_detail(self, email_id)方法）送入第一部分的大模型辅助分析决策系统，让这个模型给出决策。
+
+请将 通过邮件创建ticket的系统、大模型辅助分析决策系统、邮件监控系统的流程图都画出来（关键信息不要丢失），并且将三者的关系、数据流动在流程图中体现。
+流程图尽量横向和竖向结合画，整体的比例近似正方形

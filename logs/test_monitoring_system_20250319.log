@@ -1,0 +1,40 @@
+2025-03-19 00:13:23,005 - test_monitoring_system - INFO - 开始测试监控系统...
+2025-03-19 00:13:23,277 - test_monitoring_system - INFO - 测试LLM分析...
+2025-03-19 00:13:26,481 - test_monitoring_system - INFO - 分析结果: [
+  {
+    "type": "automation",
+    "rootcause": "Connection timeout when processing email, likely due to network issues or temporary email service unavailability.",
+    "action": "inbox"
+  }
+]
+2025-03-19 00:13:26,481 - test_monitoring_system - INFO - 测试完成
+2025-03-19 10:25:24,128 - test_monitoring_system - INFO - 开始测试监控系统...
+2025-03-19 10:25:24,345 - test_monitoring_system - INFO - 测试LLM分析...
+2025-03-19 10:25:26,888 - test_monitoring_system - INFO - 分析结果: [
+  {
+    "type": "automation",
+    "rootcause": "Connection timeout when processing email, likely due to network issues or temporary email service unavailability.",
+    "action": "inbox"
+  }
+]
+2025-03-19 10:25:26,888 - test_monitoring_system - INFO - 测试完成
+2025-03-19 11:09:42,724 - test_monitoring_system - INFO - 开始测试监控系统...
+2025-03-19 11:09:42,911 - test_monitoring_system - INFO - 测试LLM分析...
+2025-03-19 11:09:45,597 - test_monitoring_system - INFO - 分析结果: [
+  {
+    "type": "automation",
+    "rootcause": "Connection timeout when processing email, likely due to network issues or temporary email service unavailability.",
+    "action": "inbox"
+  }
+]
+2025-03-19 11:09:45,597 - test_monitoring_system - INFO - 测试完成
+2025-03-19 11:11:56,028 - test_monitoring_system - INFO - 开始测试监控系统...
+2025-03-19 11:11:56,194 - test_monitoring_system - INFO - 测试LLM分析...
+2025-03-19 11:11:59,873 - test_monitoring_system - INFO - 分析结果: [
+  {
+    "type": "automation",
+    "rootcause": "Connection timeout when processing email, likely due to network issues or temporary email service unavailability.",
+    "action": "inbox"
+  }
+]
+2025-03-19 11:11:59,873 - test_monitoring_system - INFO - 测试完成

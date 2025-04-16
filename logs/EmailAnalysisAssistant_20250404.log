@@ -1,0 +1,20 @@
+2025-04-04 12:59:35,863 - EmailAnalysisAssistant - INFO - 初始化 EmailAnalysisAssistant...
+2025-04-04 12:59:36,119 - EmailAnalysisAssistant - DEBUG - 成功加载 business.txt
+2025-04-04 12:59:36,120 - EmailAnalysisAssistant - DEBUG - 成功加载 actionGuidance.txt
+2025-04-04 12:59:36,120 - EmailAnalysisAssistant - INFO - 开始分析邮件: test123
+2025-04-04 12:59:36,120 - EmailAnalysisAssistant - DEBUG - 邮件完整信息: {"id": 1, "emailId": "test123", "subject": "Test Subject", "processed": "F", "processed_state": "F", "error_message": "\n### Error updating database.  Cause: com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'note' at row 1\n### The error may exist in com/example/email/repository/TicketRepository.java (best guess)\n### The error may involve com.example.email.repository.TicketRepository.updateTicket-Inline\n### The error occurred while setting parameters\n### SQL: UPDATE ticket SET note = ?, update_count = ?, attachments = ? WHERE ticket_id = ?\n### Cause: com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'note' at row 1\n; Data truncation: Data too long for column 'note' at row 1; nested exception is com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'note' at row 1\n", "create_ticket": "N", "ticket_id": ""}
+2025-04-04 12:59:36,121 - EmailAnalysisAssistant - DEBUG - 生成分析提示词
+2025-04-04 12:59:36,121 - EmailAnalysisAssistant - INFO - 调用LLM模型进行分析
+2025-04-04 12:59:42,543 - EmailAnalysisAssistant - DEBUG - LLM原始响应: [
+    {
+        "type": "dev",
+        "rootcause": "Data truncation error due to the 'note' column being too long for the database schema. This is likely caused by the email content or attachments being too large to fit into the 'note' column.",
+        "action": -1
+    },
+    {
+        "type": "automation",
+        "rootcause": "impact",
+        "action": "error"
+    }
+]
+2025-04-04 12:59:42,543 - EmailAnalysisAssistant - INFO - 分析完成，决策建议: [{"type": "dev", "rootcause": "Data truncation error due to the 'note' column being too long for the database schema. This is likely caused by the email content or attachments being too large to fit into the 'note' column.", "action": -1}, {"type": "automation", "rootcause": "impact", "action": "error"}]
